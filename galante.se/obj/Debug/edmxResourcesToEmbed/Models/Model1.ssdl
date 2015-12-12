@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Jlm9900_webModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Jlm9900_webModelStoreContainer">
+    <EntitySet Name="AUTHOR_TEST" EntityType="Jlm9900_webModel.Store.AUTHOR_TEST" store:Type="Tables" Schema="Jlm9900_admin" />
+    <EntitySet Name="BOOK_TEST" EntityType="Jlm9900_webModel.Store.BOOK_TEST" store:Type="Tables" Schema="Jlm9900_admin" />
+    <AssociationSet Name="FK__BOOK_TEST__autho__30F848ED" Association="Jlm9900_webModel.Store.FK__BOOK_TEST__autho__30F848ED">
+      <End Role="AUTHOR_TEST" EntitySet="AUTHOR_TEST" />
+      <End Role="BOOK_TEST" EntitySet="BOOK_TEST" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AUTHOR_TEST">
+    <Key>
+      <PropertyRef Name="author_id" />
+    </Key>
+    <Property Name="author_id" Type="int" Nullable="false" />
+    <Property Name="author_name" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="BOOK_TEST">
+    <Key>
+      <PropertyRef Name="book_id" />
+    </Key>
+    <Property Name="book_id" Type="int" Nullable="false" />
+    <Property Name="book_name" Type="nvarchar" MaxLength="30" />
+    <Property Name="author_id" Type="int" />
+    <Property Name="book_isbn" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__BOOK_TEST__autho__30F848ED">
+    <End Role="AUTHOR_TEST" Type="Jlm9900_webModel.Store.AUTHOR_TEST" Multiplicity="0..1" />
+    <End Role="BOOK_TEST" Type="Jlm9900_webModel.Store.BOOK_TEST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTHOR_TEST">
+        <PropertyRef Name="author_id" />
+      </Principal>
+      <Dependent Role="BOOK_TEST">
+        <PropertyRef Name="author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

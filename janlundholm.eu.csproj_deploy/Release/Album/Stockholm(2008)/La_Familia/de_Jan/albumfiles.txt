@@ -1,0 +1,58 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+# and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+DSC05532.JPG	D:\Album till siter\DSC05532.JPG
+DSC05533.JPG	D:\Album till siter\DSC05533.JPG
+DSC05537.JPG	D:\Album till siter\DSC05537.JPG
+DSC05538.JPG	D:\Album till siter\DSC05538.JPG
+DSC05539.JPG	D:\Album till siter\DSC05539.JPG
+DSC05541.JPG	D:\Album till siter\DSC05541.JPG
+DSC05545.JPG	D:\Album till siter\DSC05545.JPG
+DSC05546.JPG	D:\Album till siter\DSC05546.JPG
+DSC05548.JPG	D:\Album till siter\DSC05548.JPG
+DSC05549.JPG	D:\Album till siter\DSC05549.JPG
+DSC05550.JPG	D:\Album till siter\DSC05550.JPG
+DSC05551.JPG	D:\Album till siter\DSC05551.JPG
+DSC05552.JPG	D:\Album till siter\DSC05552.JPG
+DSC05553.JPG	D:\Album till siter\DSC05553.JPG
+DSC05554.JPG	D:\Album till siter\DSC05554.JPG
+DSC05555.JPG	D:\Album till siter\DSC05555.JPG
+DSC05557.JPG	D:\Album till siter\DSC05557.JPG
+DSC05558.JPG	D:\Album till siter\DSC05558.JPG
+DSC05561.JPG	D:\Album till siter\DSC05561.JPG
+DSC05563.JPG	D:\Album till siter\DSC05563.JPG
+DSC05566.JPG	D:\Album till siter\DSC05566.JPG
+DSC05567.JPG	D:\Album till siter\DSC05567.JPG
+DSC05570.JPG	D:\Album till siter\DSC05570.JPG
+DSC05575.JPG	D:\Album till siter\DSC05575.JPG
+DSC05578.JPG	D:\Album till siter\DSC05578.JPG
+DSC05579.JPG	D:\Album till siter\DSC05579.JPG
+DSC05585.JPG	D:\Album till siter\DSC05585.JPG
+DSC05590.JPG	D:\Album till siter\DSC05590.JPG
+DSC05593.JPG	D:\Album till siter\DSC05593.JPG
+DSC05594.JPG	D:\Album till siter\DSC05594.JPG
+DSC05606.JPG	D:\Album till siter\DSC05606.JPG
+DSC05609.JPG	D:\Album till siter\DSC05609.JPG
+DSC05612.JPG	D:\Album till siter\DSC05612.JPG
+DSC05613.JPG	D:\Album till siter\DSC05613.JPG
+DSC05614.JPG	D:\Album till siter\DSC05614.JPG
+DSC05616.JPG	D:\Album till siter\DSC05616.JPG
+DSC05617.JPG	D:\Album till siter\DSC05617.JPG
+DSC05618.JPG	D:\Album till siter\DSC05618.JPG
+DSC05619.JPG	D:\Album till siter\DSC05619.JPG
+DSC05621.JPG	D:\Album till siter\DSC05621.JPG
+DSC05624.JPG	D:\Album till siter\DSC05624.JPG
+DSC05625.JPG	D:\Album till siter\DSC05625.JPG
+DSC05648.JPG	D:\Album till siter\DSC05648.JPG
+DSC05652.JPG	D:\Album till siter\DSC05652.JPG
+DSC05656.JPG	D:\Album till siter\DSC05656.JPG
+DSC05659.JPG	D:\Album till siter\DSC05659.JPG
+DSC05662.JPG	D:\Album till siter\DSC05662.JPG
+DSC05663.JPG	D:\Album till siter\DSC05663.JPG
+DSC05664.JPG	D:\Album till siter\DSC05664.JPG
+DSC05665.JPG	D:\Album till siter\DSC05665.JPG

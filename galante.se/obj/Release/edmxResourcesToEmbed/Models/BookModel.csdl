@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Jlm9900_webModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SurftownMsSqlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BOOK_TEST" EntityType="Jlm9900_webModel.BOOK_TEST" />
+    <EntitySet Name="AUTHOR_TEST" EntityType="Jlm9900_webModel.AUTHOR_TEST" />
+    <AssociationSet Name="FK__BOOK_TEST__autho__30F848ED" Association="Jlm9900_webModel.FK__BOOK_TEST__autho__30F848ED">
+      <End Role="AUTHOR_TEST" EntitySet="AUTHOR_TEST" />
+      <End Role="BOOK_TEST" EntitySet="BOOK_TEST" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BOOK_TEST">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="book_name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="book_isbn" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="author_id" />
+    <NavigationProperty Name="AUTHOR_TEST" Relationship="Jlm9900_webModel.FK__BOOK_TEST__autho__30F848ED" FromRole="BOOK_TEST" ToRole="AUTHOR_TEST" />
+  </EntityType>
+  <EntityType Name="AUTHOR_TEST">
+    <Key>
+      <PropertyRef Name="author_id" />
+    </Key>
+    <Property Type="Int32" Name="author_id" Nullable="false" />
+    <Property Type="String" Name="author_name" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BOOK_TEST" Relationship="Jlm9900_webModel.FK__BOOK_TEST__autho__30F848ED" FromRole="AUTHOR_TEST" ToRole="BOOK_TEST" />
+  </EntityType>
+  <Association Name="FK__BOOK_TEST__autho__30F848ED">
+    <End Type="Jlm9900_webModel.AUTHOR_TEST" Role="AUTHOR_TEST" Multiplicity="0..1" />
+    <End Type="Jlm9900_webModel.BOOK_TEST" Role="BOOK_TEST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTHOR_TEST">
+        <PropertyRef Name="author_id" />
+      </Principal>
+      <Dependent Role="BOOK_TEST">
+        <PropertyRef Name="author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

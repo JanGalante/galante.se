@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLayer.Team" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZBAAIBAAAAIYgAQRoACAAAwgEBAAAAQAAQIAgQgBAIQ=</HashCode>
+      <FileName>Team.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Games" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BusinessLayer.Game" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBFAAIAAiAAAABABACAAAAAAFAACBAAAAAAAhQQA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.GameCollection" Collapsed="true">
+    <Position X="7" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAABRAAQABAAAAAAAAAIA=</HashCode>
+      <FileName>GameCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcGame" Collapsed="true">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAgAAACAAAABAAAAAAACAgAAAQBAAAAAAAhQAA=</HashCode>
+      <FileName>wcGame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_homeTeam" />
+      <Field Name="_awayTeam" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_results" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.wcGameCollection" Collapsed="true">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcGameCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcTeam" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIBAAAAAAgAABgACAAAQgEAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>wcTeam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BusinessLayer.wcGameReposetory">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcGameReposetory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcResultPenelties">
+    <Position X="12.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcResultPenelties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcResult" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAIAAABAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>wcResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcResultHalfTime">
+    <Position X="9" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcResultHalfTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.wcResultFullTime">
+    <Position X="10.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wcResultFullTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

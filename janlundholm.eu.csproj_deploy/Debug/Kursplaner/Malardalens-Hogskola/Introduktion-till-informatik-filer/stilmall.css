@@ -1,0 +1,141 @@
+BODY {
+	FONT-SIZE: 14px; FONT-FAMILY: arial,helvetica,sans-serif
+}
+TD {
+	FONT-SIZE: 14px; FONT-FAMILY: arial,helvetica,sans-serif
+}
+TH {
+	FONT-SIZE: 14px; FONT-FAMILY: arial,helvetica,sans-serif
+}
+H1 {
+	COLOR: #003366
+}
+H2 {
+	COLOR: #003366
+}
+H3 {
+	COLOR: #003366
+}
+H4 {
+	COLOR: #003366
+}
+H5 {
+	COLOR: #003366
+}
+H6 {
+	COLOR: #003366
+}
+H1 {
+	FONT-SIZE: 2em
+}
+H2 {
+	FONT-SIZE: 1.7em
+}
+H3 {
+	FONT-SIZE: 1.4em
+}
+H4 {
+	FONT-SIZE: 1.2em
+}
+H5 {
+	FONT-SIZE: 1.1em
+}
+H6 {
+	FONT-SIZE: 1em
+}
+TT {
+	FONT-FAMILY: monospace
+}
+A:link {
+	COLOR: #003366
+}
+A:visited {
+	COLOR: #003366
+}
+A:active {
+	COLOR: #003366
+}
+A:hover {
+	COLOR: #666666
+}
+.datum {
+	FONT-SIZE: 0.9em
+}
+.liten {
+	FONT-SIZE: 0.7em
+}
+.minst {
+	FONT-SIZE: 0.6em
+}
+.menyvit {
+	FONT-SIZE: 0.85em; TEXT-DECORATION: none
+}
+.menybla {
+	FONT-SIZE: 0.85em; TEXT-DECORATION: none
+}
+.menysvart {
+	FONT-SIZE: 0.85em; TEXT-DECORATION: none
+}
+.menyvit {
+	COLOR: #ffffff
+}
+.menybla {
+	COLOR: #003366
+}
+.menysvart {
+	COLOR: #000000
+}
+.radav {
+	LINE-HEIGHT: 1.3em
+}
+.rubrik1 {
+	COLOR: #003366
+}
+.rubrik2 {
+	COLOR: #003366
+}
+.rubrik3 {
+	COLOR: #003366
+}
+.rubrik4 {
+	COLOR: #003366
+}
+.rubrik5 {
+	COLOR: #003366
+}
+.rubrik6 {
+	COLOR: #003366
+}
+.rubrik1 {
+	FONT-SIZE: 2em
+}
+.rubrik2 {
+	FONT-SIZE: 1.7em
+}
+.rubrik3 {
+	FONT-SIZE: 1.4em
+}
+.rubrik4 {
+	FONT-SIZE: 1.2em
+}
+.rubrik5 {
+	FONT-SIZE: 1.1em
+}
+.rubrik6 {
+	FONT-SIZE: 1em
+}
+.toppmeny {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.7em; COLOR: #000000; FONT-FAMILY: arial,helvetica,sans-serif
+}
+.toppmeny A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.kod {
+	FONT-SIZE: 0.9em; COLOR: #0000cc; FONT-FAMILY: monospace
+}
+.informationsansvarig {
+	PADDING-TOP: 1em
+}
+.undersida2rubrik {
+	PADDING-RIGHT: 0.5em; FONT-WEIGHT: bold; FONT-SIZE: 1.1em; TEXT-TRANSFORM: uppercase; COLOR: #003366; TEXT-ALIGN: right
+}

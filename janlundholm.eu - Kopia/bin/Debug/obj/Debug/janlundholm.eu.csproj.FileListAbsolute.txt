@@ -1,0 +1,9 @@
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\janlundholm.eu.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\janlundholm.eu.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\Business Layer.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\Data Layer.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\Data Layer.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\bin\Business Layer.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\obj\Debug\janlundholm.eu.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\janlundholm.eu\obj\Debug\janlundholm.eu.pdb

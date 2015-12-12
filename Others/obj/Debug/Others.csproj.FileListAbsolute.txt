@@ -1,0 +1,10 @@
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Others\bin\Debug\Others.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Others\bin\Debug\Others.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Others\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Others\obj\Debug\Others.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Others\obj\Debug\Others.pdb
+C:\Siter\janlundholm.eu\Others\bin\Debug\Others.dll
+C:\Siter\janlundholm.eu\Others\bin\Debug\Others.pdb
+C:\Siter\janlundholm.eu\Others\obj\Debug\Others.dll
+C:\Siter\janlundholm.eu\Others\obj\Debug\Others.pdb
+C:\Siter\janlundholm.eu\Others\obj\Debug\Others.csprojResolveAssemblyReference.cache

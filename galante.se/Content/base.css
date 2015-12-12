@@ -1,0 +1,54 @@
+﻿/**** Base elements ************************/
+body { background-color:rgb(51,51,51); }
+/*body { background-color:white; }*/
+
+
+
+/*body { background-color:rgb(50,50,50); background-image:url(../Bilder/g_background.jpg); background-repeat:repeat-y; background-position:center; }*/ /*sonystyle.com*/
+a:link { color:Gray; font-family: verdana; font-size: 14px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:visited { color:Gray; font-family: verdana; font-size: 14px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:hover { color:#D3D3D3; font-family: verdana; font-size: 14px;	font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:active { color:Gray; font-family: verdana; font-size: 14px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+
+p,
+ol { color: white; }
+
+.gradient { 
+    background: -moz-linear-gradient(top,  rgba(51,51,51,0.99) 0%, rgba(51,51,51,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0.99)), color-stop(100%,rgba(51,51,51,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(51,51,51,0.99) 0%,rgba(51,51,51,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(51,51,51,0.99) 0%,rgba(51,51,51,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(51,51,51,0.99) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(51,51,51,0.99) 0%,rgba(51,51,51,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    
+    /*http://www.colorzilla.com/gradient-editor/ */
+}
+
+
+/**** Skellet ************************/
+
+
+/**** Header ************************/
+header div.container .row { border-bottom:1px solid gray; }
+
+    /**** navbar ************************/
+div.navbar .navbar-inner { background-image: none; box-shadow:none; border: 0px none; margin-top:0px; margin-bottom:0px; }
+div.navbar .navbar-inner { background-color: rgb(51,51,51); }
+    div.navbar .navbar-inner.gradient { background-color: rgba(0,0,0,0); height:50px; }
+
+    div.navbar .navbar-inner .logo { margin-left:-10px; }
+    div.navbar .navbar-inner nav a { margin-right: 5px; }
+/*div.navbar .container .row { border-bottom: solid 1px gray; }*/
+
+    /**** breadcrumb ************************/
+header .breadcrumb { margin-top:10px; }
+
+
+
+
+/**** Footer ************************/
+footer div.row { border-bottom:1px solid gray; margin-bottom:20px; }
+
+
+

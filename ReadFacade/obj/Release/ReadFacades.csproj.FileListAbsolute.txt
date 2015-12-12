@@ -1,0 +1,8 @@
+C:\Siter\janlundholm.eu\ReadFacade\obj\Release\ReadFacades.csprojResolveAssemblyReference.cache
+C:\Siter\janlundholm.eu\ReadFacade\bin\Release\ReadFacade.dll.config
+C:\Siter\janlundholm.eu\ReadFacade\bin\Release\ReadFacade.dll
+C:\Siter\janlundholm.eu\ReadFacade\bin\Release\ReadFacade.pdb
+C:\Siter\janlundholm.eu\ReadFacade\bin\Release\EntityFramework.dll
+C:\Siter\janlundholm.eu\ReadFacade\bin\Release\EntityFramework.xml
+C:\Siter\janlundholm.eu\ReadFacade\obj\Release\ReadFacade.dll
+C:\Siter\janlundholm.eu\ReadFacade\obj\Release\ReadFacade.pdb

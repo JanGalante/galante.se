@@ -1,0 +1,313 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="European2012.aspx.cs" Inherits="janlundholm.eu.European2012" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<script src="JavaScript/jquery.js" type="text/javascript"></script>
+	<script src="JavaScript/jquery.effects.js" type="text/javascript"></script>
+	<script src="JavaScript/knockout.js" type="text/javascript"></script>
+	<script src="JavaScript/jquery.jeditable.js" type="text/javascript"></script>
+	<script src="JavaScript/section/european2012.js" type="text/javascript"></script>
+</asp:Content>
+
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
+</asp:Content>--%>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
+	<h2>EM 2012</h2>
+    <p><br />Hur fyller jag i?
+    </p>
+    <ol style="list-style-position: inside;">
+		<li>Fyll i resultaten i respektive grupp. (Klicka på bindestrecket för att ange resultat.)</li>
+		<li>1:an respektive 2:an i varje grupp överförs automatiskt till rätt kvartsfinalplats i slutspelsträdet.</li>
+		<li>Ange lag som du vill ska gå vidare från kvartsfinal genom att klicka på landets namn.</li>
+		<li>Gör på liknande sätt för att välja lag vidare från semifinal, samt välja lag som du tror vinner finalen.</li>
+		<li>Spara ditt slutspelsträd genom att klicka på knappen "Spara slutspelsträd"</li>
+		<li>Hämta ut din Excel genom att klicka på knappen "Hämta Excel".</li>
+	</ol>
+   
+	<h2>Slutspel</h2>
+	<%--<div style="<%# Container.ItemIndex == 0 ? null : "display:none" %>">--%>
+    <div id="wrapper" class="finals">
+    
+    <asp:Label ID="lblExcelValue" runat="server"></asp:Label>
+    
+		<%--Kvartsfinaler--%>
+		<asp:Repeater ID="rpQuarterfinals" runat="server">
+			<HeaderTemplate>
+				<div class="quarterfinals">
+			</HeaderTemplate>
+				
+			<ItemTemplate>
+				<div id="<%# Eval("Id") %>" class="game">
+					<div class="team">
+						<div class="leftspace">&nbsp;</div>
+						<div class="pairing"><%# Eval("Id") %></div>
+						<%--<div class="pairing"><%# Eval("Id") %><img src="<%# this.GetImageUrlHomeTeam(Container.DataItem) %>" style="height:15px; margin-left:10px;" /></div>--%>
+						<div class="name"><%# ((BusinessLayer.wcGame)Container.DataItem).HomeTeam.Name %></div>
+						<%--<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultHomeTeam %></div>--%>
+						<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><span><%# this.GetResultHomeTeam(Container.DataItem) %></span>&nbsp;</div>
+						<div class="clear"><!-- --></div>
+					</div>
+					<div class="team">
+						<div class="leftspace topline">&nbsp;</div>
+						<div class="pairing topline"><%# Eval("Id") %></div>
+						<div class="name topline"><%# ((BusinessLayer.wcGame)Container.DataItem).AwayTeam.Name %></div>
+						<%--<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultAwayTeam %>--%>
+						<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><span><%# this.GetResultAwayTeam(Container.DataItem) %></span>&nbsp;</div>
+						<div class="clear"><!-- --></div>
+					</div>
+					<asp:PlaceHolder ID="phGap" runat="server" Visible="<%# ((BusinessLayer.wcGameCollection)rpQuarterfinals.DataSource).Count - 1 == Container.ItemIndex ? false : true %>">
+						<div class="gap <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><!-- --></div>
+					</asp:PlaceHolder>
+				</div>
+			</ItemTemplate>
+				
+			<FooterTemplate>
+				</div>
+			</FooterTemplate>
+		</asp:Repeater>
+		
+		<%--Semifinaler--%>
+		<asp:Repeater ID="rpSemiFinals" runat="server">
+			<HeaderTemplate>
+				<div class="semifinals">
+			</HeaderTemplate>
+
+			<ItemTemplate>
+				<div id="<%# Eval("Id") %>" class="game">
+					<div class="team">
+						<div class="leftspace">&nbsp;</div>
+						<div class="pairing"><%# Eval("Id") %></div>
+						<div class="name"><%# ((BusinessLayer.wcGame)Container.DataItem).HomeTeam.Name %></div>
+						<%--<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultHomeTeam %></div>--%>
+						<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><span><%# this.GetResultHomeTeam(Container.DataItem) %></span>&nbsp;</div>
+						<div class="clear"><!-- --></div>
+					</div>
+					<div class="team">
+						<div class="leftspace topline">&nbsp;</div>
+						<div class="pairing topline"><%# Eval("Id") %></div>
+						<div class="name topline"><%# ((BusinessLayer.wcGame)Container.DataItem).AwayTeam.Name %></div>
+						<%--<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultAwayTeam %>--%>
+						<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><span><%# this.GetResultAwayTeam(Container.DataItem) %></span>&nbsp;</div>
+						<div class="clear"><!-- --></div>
+					</div>
+					<asp:PlaceHolder ID="phGap" runat="server" Visible="<%# ((BusinessLayer.wcGameCollection)rpSemiFinals.DataSource).Count - 1 == Container.ItemIndex ? false : true %>">
+						<div class="gap <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><!-- --></div>
+					</asp:PlaceHolder>
+				</div>
+			</ItemTemplate>
+				
+			<FooterTemplate>
+				</div>
+			</FooterTemplate>
+		</asp:Repeater>
+		
+		<%--final--%>
+		<asp:Repeater ID="rpFinal" runat="server">
+			<HeaderTemplate>
+				<div class="final">
+			</HeaderTemplate>
+				
+			<ItemTemplate>
+				<div id="<%# Eval("Id") %>" class="game">
+					<div class="team">
+						<div class="leftspace">&nbsp;</div>
+						<div class="pairing"><%# Eval("Id") %></div>
+						<div class="name"><%# ((BusinessLayer.wcGame)Container.DataItem).HomeTeam.Name %></div>
+						<%--<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultHomeTeam %></div>--%>
+						<div class="result <%# Container.ItemIndex % 2 == 0 ? null : " rightline" %>"><span><%# this.GetResultHomeTeam(Container.DataItem) %></span></div>
+						<div class="clear"><!-- --></div>
+					</div>
+					<div class="team">
+						<div class="leftspace topline">&nbsp;</div>
+						<div class="pairing topline"><%# Eval("Id") %></div>
+						<div class="name topline"><%# ((BusinessLayer.wcGame)Container.DataItem).AwayTeam.Name %></div>
+						<%--<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><%# ((BusinessLayer.wcGame)Container.DataItem).FinalResult.ResultAwayTeam %>--%>
+						<div class="result topline <%# Container.ItemIndex % 2 == 0 ? " rightline" : null %>"><span><%# this.GetResultAwayTeam(Container.DataItem) %></span></div>
+						<div class="clear"><!-- --></div>
+					</div>
+				</div>
+			</ItemTemplate>
+				
+			<FooterTemplate>
+					<%--Bronsmatch--%>
+					<%--<div class="bronze-game">
+						<div class="game">
+							<div class="type">Bronsmatch</div>
+							<div class="team">
+								<div class="leftspace">&nbsp;</div>
+								<div class="pairing">&nbsp;</div>
+								<div class="name">Tvåan</div>
+								<div class="result">&nbsp;</div>
+								<div class="clear"><!-- --></div>
+							</div>
+							<div class="team">
+								<div class="leftspace topline">&nbsp;</div>
+								<div class="pairing topline">&nbsp;</div>
+								<div class="name topline">Trea</div>
+								<div class="result topline">&nbsp;</div>
+								<div class="clear"><!-- --></div>
+							</div>
+						</div>
+					</div>--%>
+				</div>
+			</FooterTemplate>
+		</asp:Repeater>
+		
+		
+		<%--Vinnare--%>
+		<div class="prize-giving">
+			<div id="<%# Eval("Id") %>" class="game">
+				<div class="team">
+					<div class="leftspace">&nbsp;</div>
+					<div class="pairing">1:a</div>
+					<div class="name"><asp:Literal ID="litWinner" runat="server" /></div>
+					<div class="result">&nbsp;</div>
+					<div class="clear"><!-- --></div>
+				</div>
+				<%--<div class="team">
+					<div class="leftspace topline">&nbsp;</div>
+					<div class="pairing topline">2</div>
+					<div class="name topline">Tvåan</div>
+					<div class="result topline">&nbsp;</div>
+					<div class="clear"><!-- --></div>
+				</div>
+				<div class="team">
+					<div class="leftspace topline">&nbsp;</div>
+					<div class="pairing topline">3</div>
+					<div class="name topline">Trea</div>
+					<div class="result topline">&nbsp;</div>
+					<div class="clear"><!-- --></div>
+				</div>--%>
+			</div>
+		</div>
+		
+		<div style="clear:both"><!-- --></div>
+	    
+	    <div style="margin-top:40px;">
+			<%--<input type="submit" id="update-finals" name="update-finals" value="Uppdatera slutspelsträd" />--%>
+			<input type="submit" id="finals" name="finals" value="Spara slutspelsträd" />(Gruppmatcher sparas automatiskt efter varje ändring. Slutspelsmatcher måsta spararas manuelt)<br />
+			<input type="submit" id="getExcel" name="finals" value="Hämta Excel" />
+	    </div>
+		<br />
+   
+    </div>
+        
+    <br />
+    
+   
+   <%--Använder Knockout för att presentera json data--%>
+   <div> 
+		<%--<table>
+			<thead>
+				<tr>
+					<td>&nbsp;</td>
+					<td>P</td>
+					<td>W</td>
+					<td>D</td>
+					<td>L</td>
+					<td>F</td>
+					<td>A</td>
+					<td>+-</td>
+					<td>P</td>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: teams">
+				<tr>
+					<td data-bind="text: name"></td>
+					<td data-bind="text: gamesplayed"></td>
+					<td data-bind="text: gameswon"></td>
+					<td data-bind="text: gamesdraw"></td>
+					<td data-bind="text: gameslost"></td>
+					<td data-bind="text: goalsmade"></td>
+					<td data-bind="text: goalsbackward"></td>
+					<td data-bind="text: goaldifference"></td>
+					<td data-bind="text: points"></td>
+				</tr>    
+			</tbody>
+		</table>--%>
+		
+		
+		<%--<p>First name: <strong data-bind="text: firstName"></strong></p>
+		<p>Last name: <strong data-bind="text: lastName"></strong></p>
+
+		<p>First name: <input data-bind="value: firstName" /></p>
+		<p>Last name: <input data-bind="value: lastName" /></p>--%>
+   </div>
+   
+    
+    <%--Repeater för alla grupper--%>
+    <asp:Repeater ID="rptTournament" runat="server">
+         <ItemTemplate>
+			<hr />
+			<br />
+			<%--<h2 class="group <%# Container.ItemIndex == 0 ? "visible" : null %>"><%# this.GetGroupName(Container.DataItem) %></h2>--%>
+			<%--<div style="<%# Container.ItemIndex == 0 ? null : "display:none" %>">--%>
+			<h2 class="group <%# this.HasPlayDay(Container.DataItem) == true ? "visible" : null %>"><%# this.GetGroupName(Container.DataItem) %></h2>
+			<div style="<%# this.HasPlayDay(Container.DataItem) == true ? null : "display:none" %>">
+         
+				<%--Matcher--%>
+				<asp:Repeater ID="rptTournamentResults" runat="server" DataSource="<%#(BusinessLayer.wcGameCollection)Container.DataItem %>">
+					<HeaderTemplate>
+						<div class="games" rel="<%# this.GetGroupName(((RepeaterItem)Container.Parent.Parent).DataItem).Replace(" ", "-") %>">
+					</HeaderTemplate>
+					<ItemTemplate>
+						<div class="game">
+							<%# ((BusinessLayer.wcGame)Container.DataItem).Date.ToString("d MMMM HH:mm") %>
+							<%# Eval("Channel") %>
+							<img src="<%# this.GetImageUrlHomeTeam(Container.DataItem) %>" style="height:15px; margin-left:10px;" />
+							<span class="name-hometeam"><%# this.GetHomeTeamName(Container.DataItem) %></span> - 
+							<img src="<%# this.GetImageUrlAwayTeam(Container.DataItem) %>" style="height:15px;" />
+							<span class="name-awayteam"><%# this.GetAwayTeamName(Container.DataItem) %></span>
+							<span class="editable" id="<%# Eval("Id") %>" style="margin-left:10px;"><%# this.GetResultHomeTeam(Container.DataItem) %> - <%# this.GetResultAwayTeam(Container.DataItem) %></span>
+						</div>
+					</ItemTemplate>
+					<FooterTemplate>
+						</div>
+					</FooterTemplate>  
+				</asp:Repeater>            
+
+				<br />
+				<%--Tabell--%>
+				<asp:Repeater ID="Repeater1" runat="server" DataSource="<%#((BusinessLayer.wcGameCollection)Container.DataItem).Teams %>">
+					<HeaderTemplate>
+						<table id="<%#  this.GetGroupName(((RepeaterItem)Container.Parent.Parent).DataItem).Replace(" ", "-") %>" class="group">
+							<tr class="header">
+								<td>&nbsp;</td>
+								<td class="numeric">Spelade</td>
+								<td class="numeric">Vinst</td>
+								<td class="numeric">Oavgjort</td>
+								<td class="numeric">Förlust</td>
+								<td class="numeric">Gjorda mål</td>
+								<td class="numeric">Insläpta mål</td>
+								<td class="numeric">Målskillnad</td>
+								<td class="numeric">Poäng</td> 
+								<%--<td style="display:none;">posistion</td>--%>
+							</tr>
+					</HeaderTemplate>
+					<ItemTemplate>
+							<tr class="<%# Container.ItemIndex + 1 %>">
+								<td class="name"><%# Eval("Name") %></td>
+								<td class="numeric"><%# Eval("GamesPlayed") %></td>
+								<td class="numeric"><%# Eval("GamesWon")%></td>
+								<td class="numeric"><%# Eval("GamesDraw")%></td>
+								<td class="numeric"><%# Eval("GamesLost")%></td>
+								<td class="numeric"><%# Eval("GoalsMade")%></td>
+								<td class="numeric"><%# Eval("GoalsBackward")%></td>
+								<td class="numeric"><%# ((BusinessLayer.wcTeam)Container.DataItem).GoalsMade - ((BusinessLayer.wcTeam)Container.DataItem).GoalsBackward%></td>
+								<td class="numeric"><%# Eval("Points") %></td>
+								<%--<td style="display:none;"><%# Container.ItemIndex %></td>--%>
+							</tr>
+					</ItemTemplate>
+					<FooterTemplate>
+						</table>
+						<br />
+	<%--                    <hr />--%>
+						<br />
+					</FooterTemplate>
+				</asp:Repeater>
+            </div>
+        </ItemTemplate>            
+    </asp:Repeater>
+</asp:Content>
+
+<%--<asp:Content ID="Content4" ContentPlaceHolderID="Footer" runat="server">
+</asp:Content>--%>

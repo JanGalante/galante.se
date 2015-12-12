@@ -1,0 +1,33 @@
+﻿@{
+    DateTime date = DateTime.Now;
+}
+
+
+<h1>Skapa tvättstugeschema</h1>
+<p>Använd den här lilla appen om du vill skapa en tvästugeschema.</p>
+
+
+@using (Html.BeginForm("Download", "LaundryRoom", FormMethod.Post, new { }))
+{
+    <div class="control-group">
+        <label class="control-label" for="fromDate" style="color: white">Från månad</label>
+        <div class="controls">
+            @*<input type="date" id="fromDate" name="fromDate" placeholder="datum">*@
+
+            <div class="input-append date" id="dp3" data-date="2013-04-01" data-date-format="yyyy-mm-dd">
+                @*<input class="span2" size="16" type="text" id="fromDate" name="fromDate" value="2013-04-01">*@
+                <input class="span2" size="16" type="text" id="fromDate" name="fromDate" value="@string.Format("{0:yyyy-MM-dd}", date)">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+
+            <button type="submit" class="btn btn-info">Skapa Schema</button>
+        </div>
+    </div>
+}
+
+@*@Html.ActionLink("Skapa schema", "Download", "LaundryRoom", new { @class = "btn btn-info", @target = "_blank" } )*@

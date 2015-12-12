@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+	<link href="~/Css/Base.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/thickbox.css" rel="stylesheet" type="text/css" />
+    <script src="/JavaScript/jquery.js" type="text/javascript"></script>
+    <script src="/JavaScript/jquery.jl.em.js" type="text/javascript"></script>
+    @RenderSection("Head", false)
+    <script src="/JavaScript/thickbox.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="centerIE container">
+        <div class="centerFirefox box">
+    		
+		    @*Header*@
+		    <div class="Header">
+                @if (IsSectionDefined("header"))
+	            {
+		            @RenderSection("Header", false)
+	            }
+                else 
+                {
+                    <span class="logo">Jan Lundholm</span>
+				    <span class="menu">
+				        <a href="/">Hem</a>
+                        <a href="#">CV</a>
+                        <a href="mailto:ave_caesar@hotmail.com">Kontakt</a>
+                        <a href="#">Login</a>
+                        <a href="#">EM 2012</a>
+                        <a href="#">Fotboll</a>
+				    </span>
+                }
+		    </div>
+    		
+		    @*Content*@
+		    <div class="content">
+			    @RenderBody()
+		    </div>
+    		
+		    @*Footer*@
+		    <div class="footer">
+                @RenderSection("Footer", false)
+		    </div>
+    		
+	    </div>
+    </div>
+    </form>
+</body>
+</html>

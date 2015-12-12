@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{344967DC-D297-46CF-9719-FA6B5813E8D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Others</RootNamespace>
+    <AssemblyName>Others</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PreRelease|AnyCPU' ">
+    <OutputPath>bin\PreRelease\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\EPPlus.dll" />
+    <Content Include="Components\ExcelLibrary.dll" />
+    <Content Include="Components\Newtonsoft.Json.dll" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\a.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\avatar.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\avatar_002.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\avatar_003.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\avatar_004.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\avatar_005.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\CaptchaImage.jpg" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\common.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\commonlayout.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\commonstyle.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\csharp.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\customcss.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\ga.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\GeekswithblogsAd-May2009.gif" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\IdenticonHandler.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\IdenticonHandler_002.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\IdenticonHandler_003.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\mlegy_normal.jpg" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\PoweredByAsp.gif" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\PoweredBySubtext85x33.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\print.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\quant.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\ScriptResource.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\ScriptResource_002.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\ScriptResource_003.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\style.css" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\t_ASPNETGuy.png" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\WebResource.js" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx-filer\xml.gif" />
+    <Content Include="Guider\converting-vs-2008-website-to-web-application.aspx.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Add-ins\WebDeploymentSetup.msi" />
+    <None Include="Drivers\mysql-connector-odbc-5.1.5-winx64.msi" />
+    <None Include="Guider\Subversion, TortoiseSVN and AnkhSVN.pdf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

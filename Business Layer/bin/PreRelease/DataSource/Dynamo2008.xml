@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<round id="1" type="group">
+  <game gameId="?" date="2008-01-01">
+    <teams  homeTeam="Dynamo Filmhuset" awayTeam="Abelmans Specerier" />
+    <standingFulltime homeGoal="1" awayGoal="1" />
+  </game>
+</round> 

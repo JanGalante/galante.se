@@ -1,0 +1,46 @@
+<settings version="v6.0" generator="Jalbum 8.0" build="080514">
+
+<colors 
+background="#eeeeee" 
+fill="#ffffff" 
+line="#000000" 
+text="#000000" 
+tool="#000000" 
+active="#444444"
+/>
+
+<title x="" y="">true</title>
+
+<description position="" x="" y="" w="" h="" external="">true</description>
+
+<thumbs width="68" height="68" crop="false" spacing="" autohide="false" automove="true" center="true" scrollbar="true" style="default" active="default" x="" y="" w="" h="">top</thumbs>
+
+<image  x="" minx="" y="" w="" h="" outline="false" autoscale="" preload=""/>
+
+<transition fade="true">default</transition>
+
+<info></info>
+
+
+
+<download link="" target="" x="" y="" txt="Download Image">false</download>
+
+<margin></margin>
+
+<slideshow interval="4" x="" y="" txt="Play Slideshow, Pause Slideshow" autoplay="false">false</slideshow>
+
+<donut line="" fill="" transparency=""/>
+
+<fullscreen x="" y="" txt="Enter Full Screen, Exit Full Screen">false</fullscreen>
+
+<rightmouse fullscreen="true" download="false"/>
+
+<menu prefix="[" suffix="]"/>
+
+<style>[res]styles/multi.swf</style >
+
+<backgroundimage tile="" align="center" valign="center"></backgroundimage>
+
+
+
+</settings>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Jlm9900_webModelStoreContainer" CdmEntityContainer="SurftownMsSqlEntities">
+    <EntitySetMapping Name="BOOK_TEST">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.BOOK_TEST">
+        <MappingFragment StoreEntitySet="BOOK_TEST">
+          <ScalarProperty Name="author_id" ColumnName="author_id" />
+          <ScalarProperty Name="book_id" ColumnName="book_id" />
+          <ScalarProperty Name="book_name" ColumnName="book_name" />
+          <ScalarProperty Name="book_isbn" ColumnName="book_isbn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTHOR_TEST">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.AUTHOR_TEST">
+        <MappingFragment StoreEntitySet="AUTHOR_TEST">
+          <ScalarProperty Name="author_name" ColumnName="author_name" />
+          <ScalarProperty Name="author_id" ColumnName="author_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

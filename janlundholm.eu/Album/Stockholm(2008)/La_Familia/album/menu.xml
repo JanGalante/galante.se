@@ -1,0 +1,17 @@
+<menu version="v6.0" generator="Jalbum 8.0">
+
+
+<home space="true">
+	<title><![CDATA[La Familia]]></title>
+	<album>album.xml</album>
+</home>
+
+
+<item space="false">
+	<title><![CDATA[de Jan]]></title>
+	<album>de%20Jan/album.xml</album>
+</item>
+
+
+
+</menu>

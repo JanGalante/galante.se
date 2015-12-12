@@ -1,0 +1,41 @@
+.sbmLink A:link{text-decoration: none;color: maroon;font-family: verdana,arial;font-size:9pt;}
+.sbmLink A:visited {text-decoration: none;color: maroon;font-family: verdana,arial;font-size:9pt;}
+.sbmLink A:active {text-decoration: none;color: maroon;font-family: verdana,arial;font-size:9pt;}
+.sbmLink A:hover {text-decoration: underline; color: maroon;font-family: verdana,arial;font-size:9pt;}
+.sbmDim{filter: Alpha(opacity=40);}
+.sbmDark{filter: Alpha(opacity=90);}
+.sbmText{
+color: black;
+font-family: verdana,arial;
+font-size:9pt;
+font-weight:bold;
+filter: Alpha(opacity=100);
+}
+
+a, * a {color:#9a4f1f;}
+#subtitle a {color:white;}
+blockquote {margin-top:0px;}
+li {margin-top:0px;margin-bottom:0px;}
+.post{
+font-size: 0.9em;/*text-align:justify;*/}
+
+.HeaderTitle {font-weight:bold;}
+* html blockquote { border-left:none; border-bottom:none; padding-left:4px;}
+.FooterCell {text-align:center;}
+/*font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;word-spacing:0.1em;*/
+
+/* .post h2 a, .post h5 a{border-bottom: none;solid 1px gray;} */
+.post h2, .post h5{font-size: 1.22em;vertical-align:middle;text-decoration:none;}
+.post h2 a:hover, .post h5 a:hover{text-decoration:underline overline;}
+
+post h3 {border:none; text-decoration:underline;}
+body, body * a, .post * {font-size: 1em;text-decoration:none;}
+.post {padding-left:15px;padding-right:15px;}
+
+/* ***************** */
+.cf { font-family: lucida sans typewriter; font-size: 8pt; color: #d8dec9; background: #0c1c27; }
+.cl { margin: 0px; }
+.cb1 { color: #40c4ff; }
+.cb2 { color: #e1e8c8; }
+.cb3 { color: #bfc4d7; }
+.cb4 { color: #d8f08e; }

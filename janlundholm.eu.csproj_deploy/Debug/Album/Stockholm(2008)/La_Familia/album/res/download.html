@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>BananAlbum</title>
+
+<script language="javascript" type="text/javascript" src="scripts.js"></script>
+<script>
+twdlength = window.location.search.length;
+image= '../' + window.location.search.substring(7,twdlength);
+</script>
+
+</head>
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="img/loading.gif" scroll="no">
+<div id="imgShow" style="visibility: hidden">
+<script>
+var htmlStr = '<a href="javascript:window.close();"><img alt="click to close" border="0" width=100% src="' + image + '"></a>';
+document.open();
+document.write(htmlStr);
+document.close();
+</script>
+</div>
+<div id="imgHide" style="visibility: hidden">
+<script>
+var htmlStr = '<img alt="" border="0" src="' + image + '" onLoad="opener.resizeWin(this); showDiv();"></a>';
+document.open();
+document.write(htmlStr);
+document.close();
+</script>
+</div>
+</body>
+</html>

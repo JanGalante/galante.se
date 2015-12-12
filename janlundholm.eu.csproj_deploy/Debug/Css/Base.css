@@ -1,0 +1,136 @@
+﻿/******************************
+* Base elements
+*******************************/
+/*body {background-color:Black;}*/
+body { background-color:rgb(51,51,51); height:100%; }
+/*body { background-color:rgb(50,50,50); background-image:url(../Bilder/g_background.jpg); background-repeat:repeat-y; background-position:center; }*/ /*sonystyle.com*/
+a:link { color:Gray; font-family: verdana; font-size: 12px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:visited { color:Gray; font-family: verdana; font-size: 12px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:hover { color:#D3D3D3; font-family: verdana; font-size: 12px;	font-variant: small-caps; font-weight: bold; text-decoration: none; }
+a:active { color:Gray; font-family: verdana; font-size: 12px; font-variant: small-caps; font-weight: bold; text-decoration: none; }
+
+
+/******************************
+* Skelett
+*******************************/
+div.centerIE {	text-align:center; } /*Place in container elementet*/
+div.centerFirefox { margin-left:auto; margin-right:auto; } /*Place in box elementet*/
+
+div.container { /*border:1px solid red;*/ }
+div.box { width:840px;}
+
+div.header { float:left; width:840px; height:35px; color:white; margin-top:60px; background:transparent url(../Bilder/Header/bottom-bg.jpg) repeat-x bottom; }
+div.content { float:left; width:778px; margin:30px 20px 40px 20px; padding:10px; text-align:left; border:solid 1px #202020; background-color:Black; color:white; /*height:600px;*/ }
+div.footer { float:left; width:840px; height:20px; color:white; background:transparent url(../Bilder/Footer/bottom-bg.jpg) repeat-x top; }
+
+
+/******************************
+* Elements in the Header
+*******************************/
+/* Logo */
+div.header .logo { float:left; margin:0px 0px 0px 10px; font-size:30px; font-family:Garamond; }
+
+/* Menu */
+div.header .menu { float:right; position:relative; top:10px; }
+    div.header .menu a { margin:0px 10px 0px 10px; }
+
+
+/******************************
+* Elements in the Footer
+*******************************/
+
+/******************************
+* Elements in the Content
+*******************************/
+
+
+
+.emTable td { padding-right:10px; }
+
+td.points {	text-align:right; }
+
+td.excel { text-align:right; /*color:Green;*/ font-size:small; }
+
+table.fotball { color:White; }
+    table.fotball td.number { text-align:right; }
+
+.test { color:Red; }
+/*.editThickbox { display:none; }
+#ctl00_Content_DetailsView1 { display:none; }*/
+
+
+
+	/*finals*/
+	/*div.finals .topline { border-top:solid 1px yellow; }*/
+    div.finals .rightline { border-right:solid 1px yellow; }
+
+		/*eightfinals*/
+		div.finals .eightfinals { float:left; border:solid blue 0px; margin-left:10px; }
+			div.finals .eightfinals div.team { width:157px; border:solid 0px green; }
+				div.finals .eightfinals div.team div { float:left; border:solid 0px green; }
+				div.finals .eightfinals div.team div.leftspace { width:15px; }
+				div.finals .eightfinals div.team div.pairing { width:20px; }
+				div.finals .eightfinals div.team div.name { width:100px; }
+				div.finals .eightfinals div.team div.result { float:right; width:20px; height:20px; }
+				div.finals .eightfinals div.team div.clear { float:none; clear:both; }
+	            
+				div.finals .eightfinals div.team .topline { border-top:solid 2px lightblue; } /*#556B2F olivgrön*/
+				div.finals .eightfinals div.team .rightline { border-right:solid 2px lightblue; }
+	            
+			div.finals .eightfinals div.gap { height:25px; width:155px; /*border-right:solid 1px yellow;*/ }
+
+		/*quarterfinals*/
+		div.finals .quarterfinals { float:left; border:solid red 0px; margin: 32px 0 0 0; }
+			div.finals .quarterfinals div.team { width:156px; border:solid 0px green; }
+				div.finals .quarterfinals div.team div { float:left; border:solid 0px green; }
+				div.finals .quarterfinals div.team div.leftspace { width:15px; }
+				div.finals .quarterfinals div.team div.pairing { width:20px; }
+				div.finals .quarterfinals div.team div.name { width:100px; }
+				div.finals .quarterfinals div.team div.result { float:right; width:20px; }
+				div.finals .quarterfinals div.team div.clear { float:none; clear:both; }
+	            
+				div.finals .quarterfinals div.team .topline { border-top:solid 1px yellow; }
+				div.finals .quarterfinals div.team .rightline { border-right:solid 1px yellow; }
+	            
+			div.finals .quarterfinals div.gap { height:88px; width:155px; /*border-right:solid 1px yellow;*/ }
+	        
+		/*semifinals*/
+		div.finals .semifinals { float:left; border:solid red 0px; margin:95px 0 0 0; }
+			div.finals .semifinals div.team { border:solid 0px green; }
+				div.finals .semifinals div.team div { float:left; border:solid 0px green; }
+				div.finals .semifinals div.team div.leftspace { width:15px; }
+				div.finals .semifinals div.team div.pairing { width:20px; }
+				div.finals .semifinals div.team div.name { width:100px; }
+				div.finals .semifinals div.team div.result { float:right; width:20px; }
+				div.finals .semifinals div.team div.clear { float:none; clear:both; }
+	            
+				div.finals .semifinals div.team .topline { border-top:solid 1px yellow; }
+				div.finals .semifinals div.team .rightline { border-right:solid 1px yellow; }
+	            
+			div.finals .semifinals div.gap { height:213px; /*border-right:solid 1px yellow;*/ }
+	        
+	        
+		/*final*/
+		div.finals .final { float:left; border:solid red 0px; margin:220px 0 0 0; }
+			div.finals .final div.team { border:solid 0px green; }
+				div.finals .final div.team div { float:left; border:solid 0px green; }
+				div.finals .final div.team div.leftspace { width:15px; }
+				div.finals .final div.team div.pairing { width:20px; }
+				div.finals .final div.team div.name { width:100px; }
+				div.finals .final div.team div.result { float:right; width:20px; }
+				div.finals .final div.team div.clear { float:none; clear:both; }
+	            
+				div.finals .final div.team .topline { border-top:solid 1px yellow; }
+
+
+
+/*
+#wrapper:after
+{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0px;
+ visibility: hidden;
+}
+*/

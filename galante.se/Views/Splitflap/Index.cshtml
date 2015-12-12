@@ -1,0 +1,66 @@
+﻿
+@section Header
+{
+    <link href="~/Scripts/spliflap/splitflap.css" rel="stylesheet" media="screen" />
+    <style type="text/css">
+        /*.splitflap { font-size: 150px; font-family:sans-serif; margin-bottom: 30px; }
+            .splitflap .segment { font-family: sans-serif; font-weight:normal; width: 145px; }*/
+        .splitflap { font-size: 38px; font-family:sans-serif; margin-bottom: 30px; }
+            .splitflap .segment { font-family: sans-serif; font-weight:normal; width: 40px; }
+        /*#clock { position: fixed; bottom: 0; left: 50%; font-size: 90px; margin: 0 0 20px -178px; }
+            #clock .segment { width: 120px; }
+        .twentyfour li { text-align: right !important; }
+            .twentyfour li:after { content: " "; display: inline-block; width: 10px; }
+        .ampm { margin-left: -7px !important; }
+            .ampm li { font-size: 30px !important; width: 58px !important; border-radius: 8px !important; }
+        .splitflap .ampm .top li { border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+        .splitflap .ampm .bottom li { border-top-left-radius: 0 !important; border-top-right-radius: 0 !important; }*/
+
+        .splitflap .segment:first-child .top li { border-top-left-radius: 20px; }
+        .splitflap .segment:last-child .top li { border-top-right-radius: 20px; }
+        .splitflap .segment:first-child .bottom li { border-bottom-left-radius: 20px; }
+        .splitflap .segment:last-child .bottom li { border-bottom-right-radius: 20px; } 
+    </style>
+}
+
+
+
+<h2 class="split-flap" id="splitflap" style="margin-top:100px;">Los 3 Bocerones   </h2>
+<p>Test av splitflap</p>
+<p><button id="changeWord" class="btn btn-info">Byt text</button></p>
+
+@section Footer
+{
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="~/Scripts/spliflap/splitflap.js"></script>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var intitialValue = 'FAMILIA GALANTE ';
+            var header = $("#splitflap").text().toUpperCase();
+            $("#splitflap").text('');
+
+            var disp = $("#splitflap").splitflap({
+                //initial: '                ',
+                initial: intitialValue,
+                glyphSet: [" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", ".", "-", "?", "!", ",", "1", "2", "3"]
+            });
+            setTimeout(function () { disp.splitflap("value", header) }, 1900);
+
+            var hasOriginalValue = true;
+            $('#changeWord').on('click', function () {
+                //alert(header);
+                
+                if (hasOriginalValue) {
+                    disp.splitflap("value", intitialValue);
+                    hasOriginalValue = false;
+                }
+                else {
+                    disp.splitflap("value", header);
+                    hasOriginalValue = true;
+                }
+            });
+            
+        });
+    </script>
+}

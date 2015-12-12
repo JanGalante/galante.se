@@ -1,0 +1,6 @@
+C:\Siter\janlundholm.eu\Business Layer\bin\PreRelease\DataSource\Dynamo2008.xml
+C:\Siter\janlundholm.eu\Business Layer\bin\PreRelease\Business Layer.dll.config
+C:\Siter\janlundholm.eu\Business Layer\bin\PreRelease\Business Layer.dll
+C:\Siter\janlundholm.eu\Business Layer\bin\PreRelease\Data Layer.dll
+C:\Siter\janlundholm.eu\Business Layer\obj\PreRelease\ResolveAssemblyReference.cache
+C:\Siter\janlundholm.eu\Business Layer\obj\PreRelease\Business Layer.dll

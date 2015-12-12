@@ -1,0 +1,19 @@
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\Business Layer.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\Business Layer.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\obj\Debug\Business Layer.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\obj\Debug\Business Layer.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\Business Layer.dll.config
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\Data Layer.dll
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\Data Layer.pdb
+C:\Users\Don Quijote\Documents\Visual Studio 2008\Projects\Business Layer\bin\Debug\DataSource\Dynamo2008.xml
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\DataSource\Dynamo2008.xml
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\Business Layer.dll.config
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\Business Layer.dll
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\Business Layer.pdb
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\Data Layer.dll
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\Data Layer.pdb
+C:\Siter\janlundholm.eu\Business Layer\obj\Debug\Business Layer.dll
+C:\Siter\janlundholm.eu\Business Layer\obj\Debug\Business Layer.pdb
+C:\Siter\janlundholm.eu\Business Layer\bin\Debug\EPPlus.dll
+C:\Siter\janlundholm.eu\Business Layer\obj\Debug\Business Layer.csprojResolveAssemblyReference.cache

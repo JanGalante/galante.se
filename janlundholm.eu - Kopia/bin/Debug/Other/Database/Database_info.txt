@@ -1,0 +1,11 @@
+﻿
+Host Name:      mydb13.surftown.se (212.97.133.213)
+Port number:    3306
+Database name:  Jlm9900_db
+User id:        Jlm9900_dba
+Role:           dba
+Password:       dbauser
+
+
+Välkommen till phpMyAdmin 2.6.2-Debian-3sarge6
+MySQL 5.0.41-community-log körs på mydb13.surf-town.net som Jlm9900_dba@wsi1.surf-town.net

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tournement name="World Cup" country="Sydafrika" startDate="" endDate="">
+  <group name="A">
+    <game id="1" homeTeam="Sydafrika" awayTeam="Mexiko" date="2010-06-11" channel="TV4">
+      <result halftime="" fulltime="1-2" />
+    </game>
+    <game id="2" homeTeam="Uruguay" awayTeam="Frankrike" date="2010-06-11" channel="SVT">
+      <result fulltime="1-1" />
+    </game>
+    <game id="17" homeTeam="Sydafrika" awayTeam="Uruguay" date="2010-06-16" channel="TV4">
+      <result fulltime="5-5" />
+    </game>
+    <game id="18" homeTeam="Frankrike" awayTeam="Mexiko" date="2010-06-17" channel="SVT">
+      <result fulltime="5-5" />
+    </game>
+    <game id="33" homeTeam="Mexiko" awayTeam="Uruguay" date="2010-06-22" channel="SVT">
+      <result fulltime="5-5" />
+    </game>
+    <game id="34" homeTeam="Frankrike" awayTeam="Sydafrika" date="2010-06-22" channel="SVT">
+      <result fulltime="5-5" />
+    </game>
+  </group>
+  <group name="B">
+    <game id="3" homeTeam="Sydkorea" awayTeam="Grekland" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+    <game id="4" homeTeam="Argentina" awayTeam="Nigeria" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+    <game id="19" homeTeam="Grekland" awayTeam="Nigeria" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+    <game id="20" homeTeam="Argentina" awayTeam="Sydkorea" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+    <game id="35" homeTeam="Nigeria" awayTeam="Sydkorea" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+    <game id="36" homeTeam="Grekland" awayTeam="Argentina" date="" channel="">
+      <result fulltime="6-6" />
+    </game>
+  </group>
+  <group name="C">
+    <game id="5" homeTeam="England" awayTeam="USA" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+    <game id="6" homeTeam="Algeriet" awayTeam="Slovenien" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+    <game id="22" homeTeam="Slovenien" awayTeam="USA" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+    <game id="23" homeTeam="England" awayTeam="Algeriet" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+    <game id="37" homeTeam="Slovenien" awayTeam="England" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+    <game id="38" homeTeam="USA" awayTeam="Algeriet" date="" channel="">
+      <result fulltime="7-7" />
+    </game>
+  </group>
+  <group name="D">
+    <game id="7" homeTeam="Serbien" awayTeam="Ghana" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+    <game id="8" homeTeam="Tyskland" awayTeam="Australien" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+    <game id="21" homeTeam="Tyskland" awayTeam="Serbien" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+    <game id="24" homeTeam="Ghana" awayTeam="Australien" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+    <game id="39" homeTeam="Ghana" awayTeam="Tyskland" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+    <game id="40" homeTeam="Australien" awayTeam="Serbien" date="" channel="">
+      <result fulltime="8-8" />
+    </game>
+  </group>
+  <group name="E">
+    <game id="9" homeTeam="Nederländerna" awayTeam="Danmark" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+    <game id="10" homeTeam="Japan" awayTeam="Kamerun" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+    <game id="25" homeTeam="Nederländerna" awayTeam="Japan" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+    <game id="26" homeTeam="Kamerun" awayTeam="Danmark" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+    <game id="43" homeTeam="Danmark" awayTeam="Japan" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+    <game id="44" homeTeam="Kamerun" awayTeam="Nederländerna" date="" channel="">
+      <result fulltime="9-9" />
+    </game>
+  </group>
+  <group name="F">
+    <game id="11" homeTeam="Italien" awayTeam="Paraguay" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+    <game id="12" homeTeam="Nya Zeeland" awayTeam="Slovakien" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+    <game id="27" homeTeam="Slovakien" awayTeam="Paraguay" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+    <game id="28" homeTeam="Italien" awayTeam="Nya Zeeland" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+    <game id="41" homeTeam="Slovakien" awayTeam="Italien" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+    <game id="42" homeTeam="Paraguay" awayTeam="Nya Zeeland" date="" channel="">
+      <result fulltime="10-10" />
+    </game>
+  </group>
+  <group name="G">
+    <game id="13" homeTeam="Elfenbenskusten" awayTeam="Portugal" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+    <game id="14" homeTeam="Brasilien" awayTeam="Nordkorea" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+    <game id="29" homeTeam="Brasilien" awayTeam="Elfenbenskusten" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+    <game id="30" homeTeam="Portugal" awayTeam="Nordkorea" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+    <game id="45" homeTeam="Portugal" awayTeam="Brasilien" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+    <game id="46" homeTeam="Nordkorea" awayTeam="Elfenbenskusten" date="" channel="">
+      <result fulltime="11-11" />
+    </game>
+  </group>
+  <group name="H">
+    <game id="15" homeTeam="Honduras" awayTeam="Chile" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+    <game id="16" homeTeam="Spanien" awayTeam="Schweiz" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+    <game id="31" homeTeam="Chile" awayTeam="Schweiz" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+    <game id="32" homeTeam="Spanien" awayTeam="Honduras" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+    <game id="47" homeTeam="Chile" awayTeam="Spanien" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+    <game id="48" homeTeam="Schweiz" awayTeam="Honduras" date="" channel="">
+      <result fulltime="12-12" />
+    </game>
+  </group>
+  <eighth-finals>
+    <game id="49" pairing="A1-B2" homeTeam="Uruguay" awayTeam="Nigeria" date="2010-06-11" channel="">
+      <result fulltime="0-1" />
+    </game>
+    <game id="50" pairing="C1-D2" homeTeam="Algeriet" awayTeam="Australien" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="51" pairing="D1-C2" homeTeam="Tyskland" awayTeam="Slovenien" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="52" pairing="B1-A2" homeTeam="Argentina" awayTeam="Frankrike" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="53" pairing="E1-F2" homeTeam="Japan" awayTeam="Slovakien" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="54" pairing="G1-H2" homeTeam="Brasilien" awayTeam="Schweiz" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="55" pairing="F1-E2" homeTeam="Nya Zeeland" awayTeam="Kamerun" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+    <game id="56" pairing="H1-G2" homeTeam="Spanien" awayTeam="Nordkorea" date="" channel="">
+      <result fulltime="1-0" />
+    </game>
+  </eighth-finals>
+  <quarterfinals>
+    <game id="57" pairing="53-54" homeTeam="Grekland" awayTeam="Australien" date="" channel="">
+      <result fulltime="" />
+    </game>
+    <game id="58" pairing="49-50" homeTeam="Tyskland" awayTeam="Nigeria" date="" channel="">
+      <result fulltime="" />
+    </game>
+    <game id="59" pairing="52-51" homeTeam="Slovakien" awayTeam="Schweiz" date="" channel="">
+      <result fulltime="" />
+    </game>
+    <game id="60" pairing="55-56" homeTeam="Kamerun" awayTeam="Nordkorea" date="" channel="">
+      <result fulltime="" />
+    </game>
+  </quarterfinals>
+  <semifinals>
+    <game id="61" pairing="58-57" homeTeam="Australien" awayTeam="Tyskland" date="" channel="">
+      <result fulltime="" />
+    </game>
+    <game id="62" pairing="59-60" homeTeam="Slovakien" awayTeam="Kamerun" date="" channel="">
+      <result fulltime="" />
+    </game>
+  </semifinals>
+  <final>
+    <game id="63" pairing="61-62" homeTeam="Tyskland" awayTeam="Kamerun" date="" channel="">
+      <result fulltime="" />
+    </game>
+  </final>
+</tournement>

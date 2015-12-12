@@ -1,0 +1,567 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F8E23DB-7827-484A-BD01-E367DCC71A0A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>janlundholm.eu</RootNamespace>
+    <AssemblyName>janlundholm.eu</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=3.0.0.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Others\Components\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Others\Components\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Others\Components\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomRouteHandler.cs" />
+    <Compile Include="CV.aspx.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CV.aspx.designer.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamoInomhus.aspx.cs">
+      <DependentUpon>DynamoInomhus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamoInomhus.aspx.designer.cs">
+      <DependentUpon>DynamoInomhus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EM_2008.aspx.cs">
+      <DependentUpon>EM_2008.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EM_2008.aspx.designer.cs">
+      <DependentUpon>EM_2008.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="European2012.aspx.cs">
+      <DependentUpon>European2012.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="European2012.aspx.designer.cs">
+      <DependentUpon>European2012.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="European2012Standings.aspx.cs">
+      <DependentUpon>European2012Standings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="European2012Standings.aspx.designer.cs">
+      <DependentUpon>European2012Standings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHandlers\European2012.ashx.cs">
+      <DependentUpon>European2012.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHandlers\Wc2010.ashx.cs">
+      <DependentUpon>Wc2010.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test2.aspx.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test2.aspx.designer.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPages\DbConnection.aspx.cs">
+      <DependentUpon>DbConnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPages\DbConnection.aspx.designer.cs">
+      <DependentUpon>DbConnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPages\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPages\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VM.aspx.cs">
+      <DependentUpon>VM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VM.aspx.designer.cs">
+      <DependentUpon>VM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VM_2010.aspx.cs">
+      <DependentUpon>VM_2010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VM_2010.aspx.designer.cs">
+      <DependentUpon>VM_2010.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wc2010.aspx.cs">
+      <DependentUpon>wc2010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wc2010.aspx.designer.cs">
+      <DependentUpon>wc2010.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Album.aspx" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\albumfiles.txt" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\album.xml" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\album.xml" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\index.html" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05532.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05533.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05537.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05538.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05539.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05541.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05545.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05546.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05548.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05549.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05550.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05551.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05552.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05553.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05554.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05555.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05557.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05558.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05561.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05563.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05566.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05567.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05570.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05575.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05578.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05579.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05585.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05590.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05593.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05594.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05606.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05609.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05612.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05613.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05614.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05616.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05617.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05618.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05619.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05621.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05624.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05625.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05648.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05652.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05656.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05659.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05662.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05663.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05664.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\slides\DSC05665.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05532.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05533.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05537.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05538.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05539.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05541.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05545.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05546.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05548.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05549.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05550.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05551.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05552.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05553.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05554.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05555.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05557.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05558.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05561.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05563.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05566.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05567.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05570.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05575.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05578.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05579.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05585.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05590.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05593.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05594.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05606.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05609.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05612.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05613.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05614.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05616.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05617.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05618.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05619.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05621.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05624.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05625.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05648.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05652.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05656.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05659.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05662.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05663.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05664.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\thumbs\DSC05665.JPG" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\index.html" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\menu.xml" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\BananAlbum.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\BananAlbumMM.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\download.html" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\folder.gif" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\img\BananAlbum.png" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\img\loading.gif" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\img\PleaseEnableJavascript.gif" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\img\PleaseUpdateFlashPlayer.gif" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\index.html" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\scripts.js" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles.css" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles\classic.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles\default.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles\more-to-come.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles\multi.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\styles\rounded.swf" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\res\swfobject.js" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\album\settings.xml" />
+    <Content Include="Album\Stockholm%282008%29\La_Familia\de_Jan\albumfiles.txt" />
+    <Content Include="Bilder\Em_2008\arrow-down-small.png" />
+    <Content Include="Bilder\Em_2008\arrow-up-small.png" />
+    <Content Include="Bilder\Em_2008\arrow-up[1].png" />
+    <Content Include="Bilder\Footer\bottom-bg.jpg" />
+    <Content Include="Bilder\g_background.jpg" />
+    <Content Include="Bilder\Header\bottom-bg.jpg" />
+    <Content Include="Css\Base.css" />
+    <Content Include="Css\thickbox.css" />
+    <Content Include="CV.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Documents\Dynamo2008.xml" />
+    <Content Include="DynamoInomhus.aspx" />
+    <Content Include="em.html" />
+    <Content Include="EM_2008.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="JavaScript\Base.js" />
+    <Content Include="JavaScript\editThickbox.js" />
+    <Content Include="JavaScript\editThickboxTrigger.js" />
+    <Content Include="JavaScript\jquery.fancybox.js" />
+    <Content Include="JavaScript\jquery.flot-5.0.js" />
+    <Content Include="JavaScript\jquery.flot.js" />
+    <Content Include="JavaScript\jquery.jl.em.js" />
+    <Content Include="JavaScript\jquery.jl.js" />
+    <Content Include="JavaScript\jquery.js" />
+    <Content Include="JavaScript\thickbox.js" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Administrativ-programutveckling-med-C-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Administrativ-programutveckling-med-C-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Administrativ-programutveckling-med-C.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Applikationsutveckling-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Applikationsutveckling-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Applikationsutveckling.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Forandringsarbete-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Forandringsarbete-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Forandringsarbete.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Fortsattningskurs-i-ekonomistyrning-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Fortsattningskurs-i-ekonomistyrning-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Fortsattningskurs-i-ekonomistyrning.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-ekonomistyrning-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-ekonomistyrning-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-ekonomistyrning.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-marknadsforing-och-organisation-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-marknadsforing-och-organisation-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Grundkurs-i-marknadsforing-och-organisation.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Informationssystemutveckling-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Informationssystemutveckling-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Informationssystemutveckling.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Introduktion-till-informatik-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Introduktion-till-informatik-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Introduktion-till-informatik.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\IT-ratt-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\IT-ratt-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\IT-ratt.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Komponentbaserad-applikationsutveckling-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Komponentbaserad-applikationsutveckling-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Komponentbaserad-applikationsutveckling.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Management och marknadsforing-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Management och marknadsforing-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Management och marknadsforing.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Manniska-datorinteraktion-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Manniska-datorinteraktion-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Manniska-datorinteraktion.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Metodkurs-i-informatik-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Metodkurs-i-informatik-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Metodkurs-i-informatik.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Objektorienterad-systemutveckling-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Objektorienterad-systemutveckling-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Objektorienterad-systemutveckling.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Spanska-A,-allman-inriktning-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Spanska-A,-allman-inriktning-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Spanska-A,-allman-inriktning.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemdesign-och-databasmetodik-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemdesign-och-databasmetodik-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemdesign-och-databasmetodik.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemprogram-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemprogram-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Systemprogram.htm" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Uppsatsarbete-i-informatik-filer\kursplan.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Uppsatsarbete-i-informatik-filer\stilmall.css" />
+    <Content Include="Kursplaner\Malardalens-Hogskola\Uppsatsarbete-i-informatik.htm" />
+    <Content Include="Kursplaner\Stockholms-Universitet\Applikationsprotokoll och standarder i Internet.html" />
+    <Content Include="Kursplaner\Stockholms-Universitet\Informationssakerhet.html" />
+    <Content Include="Kursplaner\Stockholms-Universitet\Internet och Affarssystem.html" />
+    <Content Include="Kursplaner\Stockholms-Universitet\Software Evolution and Maintenance.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="Other\Database\Database_info.txt" />
+    <Content Include="Other\Database\Tables.txt" />
+    <Content Include="Test.aspx" />
+    <Content Include="Test2.aspx" />
+    <Content Include="TestPages\DbConnection.aspx" />
+    <Content Include="TestPages\Users.aspx" />
+    <Content Include="VM.aspx" />
+    <Content Include="VM_2010.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".htaccess" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\album\album.rss" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\album\de_Jan\album.rss" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\album\res\download.php" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\comments.properties" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\de_Jan\comments.properties" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\de_Jan\meta.properties" />
+    <None Include="Album\Stockholm%282008%29\La_Familia\jalbum-settings.jap" />
+    <None Include="CV_Jan_Lundholm.doc" />
+    <None Include="Documents\EM-tipset 2012 Mall.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Amigos%29 - Nytt räknesystem.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Amigos%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Daniel Sagrera%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Denise Hansson%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Gustav Lange%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Jan Lundholm%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Peter Revell%29.xlsx" />
+    <None Include="Documents\EuropeanCup2012\EM-tipset 2012 %28Rickard Persson%29.xlsx" />
+    <None Include="Documents\VM-tipset 2010 - Amigos.xls" />
+    <None Include="EM\Daniel_Sagrera.xls" />
+    <None Include="EM\Denise_Hansson.xls" />
+    <None Include="EM\Gustavs_och_Carmens.xls" />
+    <None Include="EM\Jan_Lundholm.xls" />
+    <None Include="EM\Rickard_Persson.xls" />
+    <Content Include="Bilder\VM_2010\algeriet.png" />
+    <Content Include="Bilder\VM_2010\argentina.png" />
+    <Content Include="Bilder\VM_2010\australien.png" />
+    <Content Include="Bilder\VM_2010\brasilien.png" />
+    <Content Include="Bilder\VM_2010\holland.png" />
+    <Content Include="Bilder\VM_2010\Irland.png" />
+    <Content Include="Bilder\VM_2010\kamerun.png" />
+    <Content Include="Bilder\VM_2010\chile.png" />
+    <Content Include="Bilder\VM_2010\danmark.png" />
+    <Content Include="Bilder\VM_2010\england.png" />
+    <Content Include="Bilder\VM_2010\frankrike.png" />
+    <Content Include="Bilder\VM_2010\Kroatien.png" />
+    <Content Include="Bilder\VM_2010\Polen.png" />
+    <Content Include="Bilder\VM_2010\Ryssland.png" />
+    <Content Include="Bilder\VM_2010\Sverige.png" />
+    <Content Include="Bilder\VM_2010\Tjeckien.png" />
+    <Content Include="Bilder\VM_2010\tyskland.png" />
+    <Content Include="Bilder\VM_2010\ghana.png" />
+    <Content Include="Bilder\VM_2010\grekland.png" />
+    <Content Include="Bilder\VM_2010\honduras.png" />
+    <Content Include="Bilder\VM_2010\italien.png" />
+    <Content Include="Bilder\VM_2010\elfenbenskusten.png" />
+    <Content Include="Bilder\VM_2010\japan.png" />
+    <Content Include="Bilder\VM_2010\mexiko.png" />
+    <Content Include="Bilder\VM_2010\nya zeeland.png" />
+    <Content Include="Bilder\VM_2010\nigeria.png" />
+    <Content Include="Bilder\VM_2010\nordkorea.png" />
+    <Content Include="Bilder\VM_2010\paraguay.png" />
+    <Content Include="Bilder\VM_2010\portugal.png" />
+    <Content Include="Bilder\VM_2010\serbien.png" />
+    <Content Include="Bilder\VM_2010\slovakien.png" />
+    <Content Include="Bilder\VM_2010\slovenien.png" />
+    <Content Include="Bilder\VM_2010\sydafrika.png" />
+    <Content Include="Bilder\VM_2010\sydkorea.png" />
+    <Content Include="Bilder\VM_2010\spanien.png" />
+    <Content Include="Bilder\VM_2010\schweiz.png" />
+    <Content Include="Bilder\VM_2010\nederländerna.png" />
+    <Content Include="Bilder\VM_2010\Ukraina.png" />
+    <Content Include="Bilder\VM_2010\usa.png" />
+    <Content Include="Bilder\VM_2010\uruguay.png" />
+    <Content Include="Css\visualize\visualize-dark.css" />
+    <Content Include="Css\visualize\visualize-light.css" />
+    <Content Include="Css\visualize\visualize.css" />
+    <Content Include="Documents\EuropeanCupNewUser.xml" />
+    <Content Include="Documents\EuropeanCupTemplate.xml" />
+    <Content Include="Documents\WorldCupNewUser.xml" />
+    <Content Include="European2012.aspx" />
+    <Content Include="European2012Standings.aspx" />
+    <Content Include="HttpHandlers\Wc2010.ashx" />
+    <Content Include="HttpHandlers\European2012.ashx" />
+    <None Include="Kursplaner\Orebro-Universitet\Objektorienterad-programmering-i-Java-II.pdf" />
+    <None Include="Kursplaner\Stockholms-Universitet\Applikationsprotokoll-och-standarder-i-Internet.pdf" />
+    <None Include="Kursplaner\Stockholms-Universitet\Informationssakerhet.pdf" />
+    <None Include="Kursplaner\Stockholms-Universitet\Internet-och-Affarssystem.pdf" />
+    <None Include="Kursplaner\Stockholms-Universitet\Software-Evolution-and-Maintenance.pdf" />
+    <Content Include="Documents\WorldCup.xml" />
+    <Content Include="Documents\WorldCupDenise.xml" />
+    <Content Include="Documents\WorldCupTemplate.xml" />
+    <Content Include="JavaScript\excanvas.compiled.js" />
+    <Content Include="JavaScript\jquery.effects.js" />
+    <Content Include="JavaScript\jquery.jl.european2012Standings.js" />
+    <Content Include="JavaScript\jquery.jeditable.js" />
+    <Content Include="JavaScript\json.js" />
+    <Content Include="JavaScript\knockout.js" />
+    <Content Include="JavaScript\section\European2012.js" />
+    <Content Include="JavaScript\section\wc2010.js" />
+    <Content Include="JavaScript\jquery.visualize.js" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Orginal web.config" />
+    <Content Include="wc2010.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Layer\Business Layer.csproj">
+      <Project>{6ADA4FE7-6CC1-4DE7-826E-AB49C13B4569}</Project>
+      <Name>Business Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data Layer\Data Layer.csproj">
+      <Project>{CAECBDE8-671E-4975-B378-72F60C855237}</Project>
+      <Name>Data Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Other\References\MySQL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49876</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

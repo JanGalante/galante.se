@@ -1,0 +1,1 @@
+﻿#RewriteRule /old-page.asp http://www.example.com/new-page.asp [I,O,RP,L]

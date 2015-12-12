@@ -1,0 +1,16 @@
+﻿.splitflap { font-size: 38px; font-family: sans-serif; margin-bottom: 30px; }
+    .splitflap .segment { font-family: sans-serif; font-weight: normal; width: 40px; }
+        .splitflap .segment:first-child .top li { border-top-left-radius: 20px; }
+        .splitflap .segment:last-child .top li { border-top-right-radius: 20px; }
+        .splitflap .segment:first-child .bottom li { border-bottom-left-radius: 20px; }
+        .splitflap .segment:last-child .bottom li { border-bottom-right-radius: 20px; }
+
+/*Mobil anpassning*/
+ @media (max-width: 480px) {
+  .splitflap { font-size: 19px; font-family: sans-serif; margin-bottom: 30px; }
+    .splitflap .segment { font-family: sans-serif; font-weight: normal; width: 20px; margin:0 1px 0 0; }
+        .splitflap .segment:first-child .top li { border-top-left-radius: 10px; }
+        .splitflap .segment:last-child .top li { border-top-right-radius: 10px; }
+        .splitflap .segment:first-child .bottom li { border-bottom-left-radius: 10px; }
+        .splitflap .segment:last-child .bottom li { border-bottom-right-radius: 10px; }
+}

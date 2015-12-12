@@ -1,0 +1,19 @@
+﻿#msviLSBtbox
+{
+    font-size:75%;
+    height:18px;
+}
+.msviLSBlogo
+{
+    font-size:75%;
+    margin-bottom:-4px;
+}
+html>/**/body .msviLSBlogo, x:-moz-any-link, x:default 
+{
+    margin-bottom: -0.1px
+} /* FireFox 3 */
+
+#msviLSBssearch
+{
+    padding:1px 1px 0 0
+}

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Jlm9900_webModelStoreContainer" CdmEntityContainer="Jlm9900_webEntities">
+    <EntitySetMapping Name="GAME">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.GAME">
+        <MappingFragment StoreEntitySet="GAME">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GAME_TYPE_ID" ColumnName="GAME_TYPE_ID" />
+          <ScalarProperty Name="HOME_TEAM_ID" ColumnName="HOME_TEAM_ID" />
+          <ScalarProperty Name="AWAY_TEAM_ID" ColumnName="AWAY_TEAM_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="RESULT_ID" ColumnName="RESULT_ID" />
+          <ScalarProperty Name="FINISHED" ColumnName="FINISHED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAME_TYPE">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.GAME_TYPE">
+        <MappingFragment StoreEntitySet="GAME_TYPE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAYOFF_RULE">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.PLAYOFF_RULE">
+        <MappingFragment StoreEntitySet="PLAYOFF_RULE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULT">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.RESULT">
+        <MappingFragment StoreEntitySet="RESULT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HOME_TEAM_HALF_TIME" ColumnName="HOME_TEAM_HALF_TIME" />
+          <ScalarProperty Name="AWAY_TEAM_HALF_TIME" ColumnName="AWAY_TEAM_HALF_TIME" />
+          <ScalarProperty Name="HOME_TEAM_FULL_TIME" ColumnName="HOME_TEAM_FULL_TIME" />
+          <ScalarProperty Name="AWAY_TEAM_FULL_TIME" ColumnName="AWAY_TEAM_FULL_TIME" />
+          <ScalarProperty Name="HOME_TEAM_HALF_TIME_EXTRA_TIME" ColumnName="HOME_TEAM_HALF_TIME_EXTRA_TIME" />
+          <ScalarProperty Name="AWAY_TEAM_HALF_TIME_EXTRA_TIME" ColumnName="AWAY_TEAM_HALF_TIME_EXTRA_TIME" />
+          <ScalarProperty Name="HOME_TEAM_PENELTIES" ColumnName="HOME_TEAM_PENELTIES" />
+          <ScalarProperty Name="AWAY_TEAM_PENELTIES" ColumnName="AWAY_TEAM_PENELTIES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERIES_SORT_ORDER">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.SERIES_SORT_ORDER">
+        <MappingFragment StoreEntitySet="SERIES_SORT_ORDER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEAM">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.TEAM">
+        <MappingFragment StoreEntitySet="TEAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOURNAMENT">
+      <EntityTypeMapping TypeName="Jlm9900_webModel.TOURNAMENT">
+        <MappingFragment StoreEntitySet="TOURNAMENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="SERIES_SORT_ORDER_ID" ColumnName="SERIES_SORT_ORDER_ID" />
+          <ScalarProperty Name="PLAYOFF_RULE_ID" ColumnName="PLAYOFF_RULE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TOURNAMENT_GAME" TypeName="Jlm9900_webModel.TOURNAMENT_GAME" StoreEntitySet="TOURNAMENT_GAME">
+      <EndProperty Name="GAME">
+        <ScalarProperty Name="ID" ColumnName="GAME_ID" />
+      </EndProperty>
+      <EndProperty Name="TOURNAMENT">
+        <ScalarProperty Name="ID" ColumnName="TOURNAMENT_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

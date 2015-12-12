@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<title>Tvättstugeschema</title>*@
+    <title>@ViewBag.Title</title>
+    @*Css:er*@
+    @{ Html.RenderPartial("LayoutPartials/_Css"); }
+    @RenderSection("Header", required: false)
+</head>
+<body>
+    <div class="container">
+
+        @*Header*@
+        <header>
+
+            @*navbar*@
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    &nbsp;
+                </div>
+                @*menu*@
+                <div class="navbar-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span6"><span class="logo">Jan Lundholm</span></div>
+                            <div class="span6">
+                                <nav class="pull-right">
+                                    @Html.ActionLink("Hem", "index", "Home")
+                                    @*<a href="/">Bort</a>
+                                    <a href="/">Hit</a>
+                                    <a href="/">Dit</a>*@
+                                    @Html.ActionLink("Brazil 2014", "index", "WorldCup2014")
+                                    @Html.ActionLink("Tvättstuga", "index", "LaundryRoom")
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gradient layer -->
+                <div class="navbar-inner gradient">
+                    <div class="gradient">
+                        &nbsp;
+                    </div>
+                </div>                   
+            </div>
+        </header>
+
+        @*Content*@
+        <div class="row">
+            <div class="span12">
+                @RenderBody()
+            </div>
+        </div>
+
+        @*Footer*@
+        <footer>
+            <div class="row">
+                <div class="span12">&nbsp;</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- /container -->
+
+    @*Javascript*@
+    @{ Html.RenderPartial("LayoutPartials/_Javascript"); }
+    @RenderSection("Footer", required: false)
+</body>
+</html>

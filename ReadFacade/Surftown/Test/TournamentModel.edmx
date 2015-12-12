@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Jlm9900_webModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Jlm9900_webModelStoreContainer">
+          <EntitySet Name="GAME" EntityType="Jlm9900_webModel.Store.GAME" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="GAME_TYPE" EntityType="Jlm9900_webModel.Store.GAME_TYPE" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="PLAYOFF_RULE" EntityType="Jlm9900_webModel.Store.PLAYOFF_RULE" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="RESULT" EntityType="Jlm9900_webModel.Store.RESULT" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="SERIES_SORT_ORDER" EntityType="Jlm9900_webModel.Store.SERIES_SORT_ORDER" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="TEAM" EntityType="Jlm9900_webModel.Store.TEAM" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="TOURNAMENT" EntityType="Jlm9900_webModel.Store.TOURNAMENT" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="TOURNAMENT_GAME" EntityType="Jlm9900_webModel.Store.TOURNAMENT_GAME" store:Type="Tables" Schema="Jlm9900_admin" />
+          <AssociationSet Name="GAME_GAME_TYPE_FK" Association="Jlm9900_webModel.Store.GAME_GAME_TYPE_FK">
+            <End Role="GAME_TYPE" EntitySet="GAME_TYPE" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_RESULT_FK" Association="Jlm9900_webModel.Store.GAME_RESULT_FK">
+            <End Role="RESULT" EntitySet="RESULT" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_TEAM_FK" Association="Jlm9900_webModel.Store.GAME_TEAM_FK">
+            <End Role="TEAM" EntitySet="TEAM" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_TEAM_FK2" Association="Jlm9900_webModel.Store.GAME_TEAM_FK2">
+            <End Role="TEAM" EntitySet="TEAM" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_GAMES_GAME_FK" Association="Jlm9900_webModel.Store.TOURNAMENT_GAMES_GAME_FK">
+            <End Role="GAME" EntitySet="GAME" />
+            <End Role="TOURNAMENT_GAME" EntitySet="TOURNAMENT_GAME" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_GAMES_TOURNAMENT_FK" Association="Jlm9900_webModel.Store.TOURNAMENT_GAMES_TOURNAMENT_FK">
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+            <End Role="TOURNAMENT_GAME" EntitySet="TOURNAMENT_GAME" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_PLAYOFF_RULE_FK" Association="Jlm9900_webModel.Store.TOURNAMENT_PLAYOFF_RULE_FK">
+            <End Role="PLAYOFF_RULE" EntitySet="PLAYOFF_RULE" />
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_SERIES_SORT_ORDER_FK" Association="Jlm9900_webModel.Store.TOURNAMENT_SERIES_SORT_ORDER_FK">
+            <End Role="SERIES_SORT_ORDER" EntitySet="SERIES_SORT_ORDER" />
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GAME">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GAME_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="HOME_TEAM_ID" Type="int" Nullable="false" />
+          <Property Name="AWAY_TEAM_ID" Type="int" Nullable="false" />
+          <Property Name="DATE" Type="date" />
+          <Property Name="RESULT_ID" Type="int" Nullable="false" />
+          <Property Name="FINISHED" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GAME_TYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="PLAYOFF_RULE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="RESULT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HOME_TEAM_HALF_TIME" Type="int" />
+          <Property Name="AWAY_TEAM_HALF_TIME" Type="int" />
+          <Property Name="HOME_TEAM_FULL_TIME" Type="int" />
+          <Property Name="AWAY_TEAM_FULL_TIME" Type="int" />
+          <Property Name="HOME_TEAM_HALF_TIME_EXTRA_TIME" Type="int" />
+          <Property Name="AWAY_TEAM_HALF_TIME_EXTRA_TIME" Type="int" />
+          <Property Name="HOME_TEAM_PENELTIES" Type="int" />
+          <Property Name="AWAY_TEAM_PENELTIES" Type="int" />
+        </EntityType>
+        <EntityType Name="SERIES_SORT_ORDER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TEAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TOURNAMENT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="START_DATE" Type="nvarchar" MaxLength="1" />
+          <Property Name="END_DATE" Type="nvarchar" MaxLength="1" />
+          <Property Name="SERIES_SORT_ORDER_ID" Type="int" Nullable="false" />
+          <Property Name="PLAYOFF_RULE_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TOURNAMENT_GAME">
+          <Key>
+            <PropertyRef Name="TOURNAMENT_ID" />
+            <PropertyRef Name="GAME_ID" />
+          </Key>
+          <Property Name="TOURNAMENT_ID" Type="int" Nullable="false" />
+          <Property Name="GAME_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="GAME_GAME_TYPE_FK">
+          <End Role="GAME_TYPE" Type="Jlm9900_webModel.Store.GAME_TYPE" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.Store.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME_TYPE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="GAME_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_RESULT_FK">
+          <End Role="RESULT" Type="Jlm9900_webModel.Store.RESULT" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.Store.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESULT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="RESULT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_TEAM_FK">
+          <End Role="TEAM" Type="Jlm9900_webModel.Store.TEAM" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.Store.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEAM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="HOME_TEAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_TEAM_FK2">
+          <End Role="TEAM" Type="Jlm9900_webModel.Store.TEAM" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.Store.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEAM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="AWAY_TEAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_GAMES_GAME_FK">
+          <End Role="GAME" Type="Jlm9900_webModel.Store.GAME" Multiplicity="1" />
+          <End Role="TOURNAMENT_GAME" Type="Jlm9900_webModel.Store.TOURNAMENT_GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT_GAME">
+              <PropertyRef Name="GAME_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_GAMES_TOURNAMENT_FK">
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.Store.TOURNAMENT" Multiplicity="1" />
+          <End Role="TOURNAMENT_GAME" Type="Jlm9900_webModel.Store.TOURNAMENT_GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TOURNAMENT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT_GAME">
+              <PropertyRef Name="TOURNAMENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_PLAYOFF_RULE_FK">
+          <End Role="PLAYOFF_RULE" Type="Jlm9900_webModel.Store.PLAYOFF_RULE" Multiplicity="1" />
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.Store.TOURNAMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYOFF_RULE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT">
+              <PropertyRef Name="PLAYOFF_RULE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_SERIES_SORT_ORDER_FK">
+          <End Role="SERIES_SORT_ORDER" Type="Jlm9900_webModel.Store.SERIES_SORT_ORDER" Multiplicity="1" />
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.Store.TOURNAMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERIES_SORT_ORDER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT">
+              <PropertyRef Name="SERIES_SORT_ORDER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Jlm9900_webModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Jlm9900_webEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="GAME" EntityType="Jlm9900_webModel.GAME" />
+          <EntitySet Name="GAME_TYPE" EntityType="Jlm9900_webModel.GAME_TYPE" />
+          <EntitySet Name="PLAYOFF_RULE" EntityType="Jlm9900_webModel.PLAYOFF_RULE" />
+          <EntitySet Name="RESULT" EntityType="Jlm9900_webModel.RESULT" />
+          <EntitySet Name="SERIES_SORT_ORDER" EntityType="Jlm9900_webModel.SERIES_SORT_ORDER" />
+          <EntitySet Name="TEAM" EntityType="Jlm9900_webModel.TEAM" />
+          <EntitySet Name="TOURNAMENT" EntityType="Jlm9900_webModel.TOURNAMENT" />
+          <AssociationSet Name="GAME_GAME_TYPE_FK" Association="Jlm9900_webModel.GAME_GAME_TYPE_FK">
+            <End Role="GAME_TYPE" EntitySet="GAME_TYPE" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_RESULT_FK" Association="Jlm9900_webModel.GAME_RESULT_FK">
+            <End Role="RESULT" EntitySet="RESULT" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_TEAM_FK" Association="Jlm9900_webModel.GAME_TEAM_FK">
+            <End Role="TEAM" EntitySet="TEAM" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="GAME_TEAM_FK2" Association="Jlm9900_webModel.GAME_TEAM_FK2">
+            <End Role="TEAM" EntitySet="TEAM" />
+            <End Role="GAME" EntitySet="GAME" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_PLAYOFF_RULE_FK" Association="Jlm9900_webModel.TOURNAMENT_PLAYOFF_RULE_FK">
+            <End Role="PLAYOFF_RULE" EntitySet="PLAYOFF_RULE" />
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_SERIES_SORT_ORDER_FK" Association="Jlm9900_webModel.TOURNAMENT_SERIES_SORT_ORDER_FK">
+            <End Role="SERIES_SORT_ORDER" EntitySet="SERIES_SORT_ORDER" />
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+          </AssociationSet>
+          <AssociationSet Name="TOURNAMENT_GAME" Association="Jlm9900_webModel.TOURNAMENT_GAME">
+            <End Role="GAME" EntitySet="GAME" />
+            <End Role="TOURNAMENT" EntitySet="TOURNAMENT" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GAME">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GAME_TYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="HOME_TEAM_ID" Type="Int32" Nullable="false" />
+          <Property Name="AWAY_TEAM_ID" Type="Int32" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="0" />
+          <Property Name="RESULT_ID" Type="Int32" Nullable="false" />
+          <Property Name="FINISHED" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GAME_TYPE" Relationship="Jlm9900_webModel.GAME_GAME_TYPE_FK" FromRole="GAME" ToRole="GAME_TYPE" />
+          <NavigationProperty Name="RESULT" Relationship="Jlm9900_webModel.GAME_RESULT_FK" FromRole="GAME" ToRole="RESULT" />
+          <NavigationProperty Name="TEAM" Relationship="Jlm9900_webModel.GAME_TEAM_FK" FromRole="GAME" ToRole="TEAM" />
+          <NavigationProperty Name="TEAM1" Relationship="Jlm9900_webModel.GAME_TEAM_FK2" FromRole="GAME" ToRole="TEAM" />
+          <NavigationProperty Name="TOURNAMENT" Relationship="Jlm9900_webModel.TOURNAMENT_GAME" FromRole="GAME" ToRole="TOURNAMENT" />
+        </EntityType>
+        <EntityType Name="GAME_TYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GAME" Relationship="Jlm9900_webModel.GAME_GAME_TYPE_FK" FromRole="GAME_TYPE" ToRole="GAME" />
+        </EntityType>
+        <EntityType Name="PLAYOFF_RULE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TOURNAMENT" Relationship="Jlm9900_webModel.TOURNAMENT_PLAYOFF_RULE_FK" FromRole="PLAYOFF_RULE" ToRole="TOURNAMENT" />
+        </EntityType>
+        <EntityType Name="RESULT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HOME_TEAM_HALF_TIME" Type="Int32" />
+          <Property Name="AWAY_TEAM_HALF_TIME" Type="Int32" />
+          <Property Name="HOME_TEAM_FULL_TIME" Type="Int32" />
+          <Property Name="AWAY_TEAM_FULL_TIME" Type="Int32" />
+          <Property Name="HOME_TEAM_HALF_TIME_EXTRA_TIME" Type="Int32" />
+          <Property Name="AWAY_TEAM_HALF_TIME_EXTRA_TIME" Type="Int32" />
+          <Property Name="HOME_TEAM_PENELTIES" Type="Int32" />
+          <Property Name="AWAY_TEAM_PENELTIES" Type="Int32" />
+          <NavigationProperty Name="GAME" Relationship="Jlm9900_webModel.GAME_RESULT_FK" FromRole="RESULT" ToRole="GAME" />
+        </EntityType>
+        <EntityType Name="SERIES_SORT_ORDER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TOURNAMENT" Relationship="Jlm9900_webModel.TOURNAMENT_SERIES_SORT_ORDER_FK" FromRole="SERIES_SORT_ORDER" ToRole="TOURNAMENT" />
+        </EntityType>
+        <EntityType Name="TEAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GAME" Relationship="Jlm9900_webModel.GAME_TEAM_FK" FromRole="TEAM" ToRole="GAME" />
+          <NavigationProperty Name="GAME1" Relationship="Jlm9900_webModel.GAME_TEAM_FK2" FromRole="TEAM" ToRole="GAME" />
+        </EntityType>
+        <EntityType Name="TOURNAMENT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="START_DATE" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="END_DATE" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="SERIES_SORT_ORDER_ID" Type="Int32" Nullable="false" />
+          <Property Name="PLAYOFF_RULE_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PLAYOFF_RULE" Relationship="Jlm9900_webModel.TOURNAMENT_PLAYOFF_RULE_FK" FromRole="TOURNAMENT" ToRole="PLAYOFF_RULE" />
+          <NavigationProperty Name="SERIES_SORT_ORDER" Relationship="Jlm9900_webModel.TOURNAMENT_SERIES_SORT_ORDER_FK" FromRole="TOURNAMENT" ToRole="SERIES_SORT_ORDER" />
+          <NavigationProperty Name="GAME" Relationship="Jlm9900_webModel.TOURNAMENT_GAME" FromRole="TOURNAMENT" ToRole="GAME" />
+        </EntityType>
+        <Association Name="GAME_GAME_TYPE_FK">
+          <End Role="GAME_TYPE" Type="Jlm9900_webModel.GAME_TYPE" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME_TYPE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="GAME_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_RESULT_FK">
+          <End Role="RESULT" Type="Jlm9900_webModel.RESULT" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESULT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="RESULT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_TEAM_FK">
+          <End Role="TEAM" Type="Jlm9900_webModel.TEAM" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEAM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="HOME_TEAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GAME_TEAM_FK2">
+          <End Role="TEAM" Type="Jlm9900_webModel.TEAM" Multiplicity="1" />
+          <End Role="GAME" Type="Jlm9900_webModel.GAME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEAM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GAME">
+              <PropertyRef Name="AWAY_TEAM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_PLAYOFF_RULE_FK">
+          <End Role="PLAYOFF_RULE" Type="Jlm9900_webModel.PLAYOFF_RULE" Multiplicity="1" />
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.TOURNAMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYOFF_RULE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT">
+              <PropertyRef Name="PLAYOFF_RULE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_SERIES_SORT_ORDER_FK">
+          <End Role="SERIES_SORT_ORDER" Type="Jlm9900_webModel.SERIES_SORT_ORDER" Multiplicity="1" />
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.TOURNAMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERIES_SORT_ORDER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TOURNAMENT">
+              <PropertyRef Name="SERIES_SORT_ORDER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TOURNAMENT_GAME">
+          <End Role="GAME" Type="Jlm9900_webModel.GAME" Multiplicity="*" />
+          <End Role="TOURNAMENT" Type="Jlm9900_webModel.TOURNAMENT" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Jlm9900_webModelStoreContainer" CdmEntityContainer="Jlm9900_webEntities">
+          <EntitySetMapping Name="GAME">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.GAME">
+              <MappingFragment StoreEntitySet="GAME">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GAME_TYPE_ID" ColumnName="GAME_TYPE_ID" />
+                <ScalarProperty Name="HOME_TEAM_ID" ColumnName="HOME_TEAM_ID" />
+                <ScalarProperty Name="AWAY_TEAM_ID" ColumnName="AWAY_TEAM_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="RESULT_ID" ColumnName="RESULT_ID" />
+                <ScalarProperty Name="FINISHED" ColumnName="FINISHED" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GAME_TYPE">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.GAME_TYPE">
+              <MappingFragment StoreEntitySet="GAME_TYPE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLAYOFF_RULE">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.PLAYOFF_RULE">
+              <MappingFragment StoreEntitySet="PLAYOFF_RULE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESULT">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.RESULT">
+              <MappingFragment StoreEntitySet="RESULT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HOME_TEAM_HALF_TIME" ColumnName="HOME_TEAM_HALF_TIME" />
+                <ScalarProperty Name="AWAY_TEAM_HALF_TIME" ColumnName="AWAY_TEAM_HALF_TIME" />
+                <ScalarProperty Name="HOME_TEAM_FULL_TIME" ColumnName="HOME_TEAM_FULL_TIME" />
+                <ScalarProperty Name="AWAY_TEAM_FULL_TIME" ColumnName="AWAY_TEAM_FULL_TIME" />
+                <ScalarProperty Name="HOME_TEAM_HALF_TIME_EXTRA_TIME" ColumnName="HOME_TEAM_HALF_TIME_EXTRA_TIME" />
+                <ScalarProperty Name="AWAY_TEAM_HALF_TIME_EXTRA_TIME" ColumnName="AWAY_TEAM_HALF_TIME_EXTRA_TIME" />
+                <ScalarProperty Name="HOME_TEAM_PENELTIES" ColumnName="HOME_TEAM_PENELTIES" />
+                <ScalarProperty Name="AWAY_TEAM_PENELTIES" ColumnName="AWAY_TEAM_PENELTIES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERIES_SORT_ORDER">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.SERIES_SORT_ORDER">
+              <MappingFragment StoreEntitySet="SERIES_SORT_ORDER">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEAM">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.TEAM">
+              <MappingFragment StoreEntitySet="TEAM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TOURNAMENT">
+            <EntityTypeMapping TypeName="Jlm9900_webModel.TOURNAMENT">
+              <MappingFragment StoreEntitySet="TOURNAMENT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+                <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+                <ScalarProperty Name="SERIES_SORT_ORDER_ID" ColumnName="SERIES_SORT_ORDER_ID" />
+                <ScalarProperty Name="PLAYOFF_RULE_ID" ColumnName="PLAYOFF_RULE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="TOURNAMENT_GAME" TypeName="Jlm9900_webModel.TOURNAMENT_GAME" StoreEntitySet="TOURNAMENT_GAME">
+            <EndProperty Name="GAME">
+              <ScalarProperty Name="ID" ColumnName="GAME_ID" />
+            </EndProperty>
+            <EndProperty Name="TOURNAMENT">
+              <ScalarProperty Name="ID" ColumnName="TOURNAMENT_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
