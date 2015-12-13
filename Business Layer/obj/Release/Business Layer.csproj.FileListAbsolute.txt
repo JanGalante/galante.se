@@ -16,3 +16,13 @@ C:\Siter\janlundholm.eu\Business Layer\bin\Release\Data Layer.pdb
 C:\Siter\janlundholm.eu\Business Layer\obj\Release\Business Layer.csprojResolveAssemblyReference.cache
 C:\Siter\janlundholm.eu\Business Layer\obj\Release\Business Layer.dll
 C:\Siter\janlundholm.eu\Business Layer\obj\Release\Business Layer.pdb
+C:\git\galante.se\Business Layer\bin\Release\DataSource\Dynamo2008.xml
+C:\git\galante.se\Business Layer\bin\Release\Business Layer.dll.config
+C:\git\galante.se\Business Layer\bin\Release\Business Layer.dll
+C:\git\galante.se\Business Layer\bin\Release\Business Layer.pdb
+C:\git\galante.se\Business Layer\bin\Release\Data Layer.dll
+C:\git\galante.se\Business Layer\bin\Release\EPPlus.dll
+C:\git\galante.se\Business Layer\bin\Release\Data Layer.pdb
+C:\git\galante.se\Business Layer\obj\Release\Business Layer.csprojResolveAssemblyReference.cache
+C:\git\galante.se\Business Layer\obj\Release\Business Layer.dll
+C:\git\galante.se\Business Layer\obj\Release\Business Layer.pdb
