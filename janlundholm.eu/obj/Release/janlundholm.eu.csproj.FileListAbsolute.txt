@@ -13,3 +13,18 @@ C:\Siter\janlundholm.eu\janlundholm.eu\obj\Release\janlundholm.eu.csprojResolveA
 C:\Siter\janlundholm.eu\janlundholm.eu\obj\Release\janlundholm.eu.dll
 C:\Siter\janlundholm.eu\janlundholm.eu\obj\Release\janlundholm.eu.pdb
 C:\Siter\janlundholm.eu\janlundholm.eu\bin\janlundholm.eu.dll.config
+C:\git\galante.se\janlundholm.eu\bin\DataSource\Dynamo2008.xml
+C:\git\galante.se\janlundholm.eu\bin\janlundholm.eu.dll.config
+C:\git\galante.se\janlundholm.eu\bin\janlundholm.eu.dll
+C:\git\galante.se\janlundholm.eu\bin\janlundholm.eu.pdb
+C:\git\galante.se\janlundholm.eu\bin\Business Layer.dll
+C:\git\galante.se\janlundholm.eu\bin\Data Layer.dll
+C:\git\galante.se\janlundholm.eu\bin\EPPlus.dll
+C:\git\galante.se\janlundholm.eu\bin\ExcelLibrary.dll
+C:\git\galante.se\janlundholm.eu\bin\Newtonsoft.Json.dll
+C:\git\galante.se\janlundholm.eu\bin\System.Web.Routing.dll
+C:\git\galante.se\janlundholm.eu\bin\Business Layer.pdb
+C:\git\galante.se\janlundholm.eu\bin\Data Layer.pdb
+C:\git\galante.se\janlundholm.eu\obj\Release\janlundholm.eu.csprojResolveAssemblyReference.cache
+C:\git\galante.se\janlundholm.eu\obj\Release\janlundholm.eu.dll
+C:\git\galante.se\janlundholm.eu\obj\Release\janlundholm.eu.pdb

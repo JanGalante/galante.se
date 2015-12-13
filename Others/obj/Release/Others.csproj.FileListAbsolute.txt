@@ -2,3 +2,8 @@ C:\Siter\janlundholm.eu\Others\bin\Release\Others.dll
 C:\Siter\janlundholm.eu\Others\bin\Release\Others.pdb
 C:\Siter\janlundholm.eu\Others\obj\Release\Others.dll
 C:\Siter\janlundholm.eu\Others\obj\Release\Others.pdb
+C:\git\galante.se\Others\bin\Release\Others.dll
+C:\git\galante.se\Others\bin\Release\Others.pdb
+C:\git\galante.se\Others\obj\Release\Others.csprojResolveAssemblyReference.cache
+C:\git\galante.se\Others\obj\Release\Others.dll
+C:\git\galante.se\Others\obj\Release\Others.pdb
