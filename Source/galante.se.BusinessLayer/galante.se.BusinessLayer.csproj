@@ -115,6 +115,12 @@
   <ItemGroup>
     <Folder Include="Design\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\galante.se.DataLayer\galante.se.DataLayer.csproj">
+      <Project>{caecbde8-671e-4975-b378-72f60c855237}</Project>
+      <Name>galante.se.DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

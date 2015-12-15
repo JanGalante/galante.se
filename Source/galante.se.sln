@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Api", "3. Api", "{E04E7F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DBB4E67-8FAB-4B3C-9E55-178DF98DD33E}"
 	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
+		.nuget\nuget.config = .nuget\nuget.config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "galante.se.Web", "galante.se.Web\galante.se.Web.csproj", "{9BA728B7-B405-446F-BE65-A74988A2CA78}"
