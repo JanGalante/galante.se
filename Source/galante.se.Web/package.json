@@ -1,6 +1,8 @@
 {
   "jspm": {
     "dependencies": {
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.0.3",
       "moment": "npm:moment@^2.10.6"
     },
     "devDependencies": {
