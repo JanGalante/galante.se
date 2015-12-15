@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Tvättstugeschema</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/Content/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
+    @*Eget ramverk*@
+    <link href="/Content/bootstrap/css/framework.css" rel="stylesheet" media="screen">
+    @*Helt egna css-er*@
+    <link href="/Content/base.css" rel="stylesheet" media="screen">
+</head>
+<body style="padding:40px">
+    <div class="container">
+
+
+        <div class="row">
+            <div class="span12">
+                <div class="navbar navbar-fixed-top">
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <a class="brand" href="#">Jan Lundholm</a>
+                            <ul class="nav">
+                                <li class="active">@Html.ActionLink("Hem", "index", "Home")</li>
+                                <li><a href="#">Bort</a></li>
+                                <li><a href="#">Hit</a></li>
+                                <li><a href="#">Dit</a></li>
+                                <li>@Html.ActionLink("Tvättstuga", "index", "LaundryRoom")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*Header*@
+        <div>
+   
+            @*breadcrumb*@
+             <div class="row visible-phone">
+                <div class="span12">
+                    <ul class="breadcrumb">
+                      <li><a href="#">Home</a> <span class="divider">/</span></li>
+                      <li><a href="#">Library</a> <span class="divider">/</span></li>
+                      <li class="active">Data</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        @*Content*@
+        <div class="row">
+            <div class="span12">
+                @RenderBody()
+            </div>
+        </div>
+
+        @*Footer*@
+        <div class="row">
+            <div class="span12" style="background-color:gray;"></div>
+        </div>
+        
+    </div>
+    <!-- /container -->
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Content/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script>$('.date').datepicker()</script>
+</body>
+</html>

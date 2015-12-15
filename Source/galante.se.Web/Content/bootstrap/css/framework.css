@@ -1,0 +1,12 @@
+﻿body { background-color:rgb(51,51,51)  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color:lightblue }
+
+p, span { color:white }
+/*div.container  { background-color:white  }*/
+
+.logo { /*float:left;*/ margin-bottom:7px; /*padding-left:10px;*/ font-size:30px; font-family:Garamond; color:white; }

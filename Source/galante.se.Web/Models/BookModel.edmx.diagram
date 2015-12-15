@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c3b6b924d638420b9a31f2e9401f64cb" Name="Diagram1">
+        <EntityTypeShape EntityType="Jlm9900_webModel.BOOK_TEST" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jlm9900_webModel.AUTHOR_TEST" Width="1.5" PointX="3.625" PointY="1" />
+        <AssociationConnector Association="Jlm9900_webModel.FK__BOOK_TEST__autho__30F848ED" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

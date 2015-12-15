@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "World Cup 2014 Brazil";
+}
+
+
+@section Header
+{
+    <link href="~/Scripts/spliflap/splitflap.css" rel="stylesheet" media="screen" />
+    <link href="~/Content/themes/pages/WorldCup2014.css" rel="stylesheet" />
+}
+
+
+@*Här ligger min kod för att La Familia - Los 3 bocerones*@
+@*<h2 class="split-flap" id="splitflap" style="margin-top:100px;">Los 3 Bocerones   </h2>
+<p><button id="changeWord" class="btn btn-info">Byt text</button></p>*@
+
+
+
+@*<h2 style="color:white">Word Cup 2014 Brazil</h2>*@
+
+<div class="row">
+    <div class="span12">
+        <h3 id="leaderboard" class="split-flap" style="margin-top:100px; margin-bottom:0"></h3>
+        <p id="empty" class="split-flap" style="margin-bottom:8px;"></p>
+        <p id="gustav" class="split-flap" style="margin-bottom:8px;"></p>
+        <p id="peter" class="split-flap" style="margin-bottom:8px;"></p>
+        <p id="daniel" class="split-flap" style="margin-bottom:8px;"></p>
+        <p id="denise" class="split-flap" style="margin-bottom:8px;"></p>
+        <p id="janne" class="split-flap" style="margin-bottom:8px;"></p>
+
+        <p>Uppdaterad 2014-07-14 21:50</p>
+        <p >&nbsp;</p>
+        <p >&nbsp;</p>
+    </div>
+</div>
+
+
+@*Inforgram*@
+<div class="row">
+    <div class="span12">
+        @*Kod som fås från Infogram*@
+        <script id="infogram_0_world-cup-2014-brasil" src="//e.infogr.am/js/embed.js" type="text/javascript"></script>
+        <div style="width:100%;border-top:1px solid #acacac;padding-top:3px;font-family:Arial;font-size:10px;text-align:center;">
+            @*<a target="_blank" href="//infogr.am/world-cup-2014-brasil" style="color:#acacac;text-decoration:none;">World Cup 2014 Brasil</a> | 
+            <a style="color:#acacac;text-decoration:none;" href="//infogr.am" target="_blank">Create Infographics</a>*@
+
+        </div>
+    </div>
+</div>
+
+@*Dummy div för att med javascript kunna se om användare ser sidan på desktop*@
+<div class="row visible-desktop">
+    <div id="visibleDesktop" class="span12">
+    </div>
+</div>
+
+
+@section Footer
+{
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="~/Scripts/spliflap/splitflap.js"></script>
+    <script src="~/Scripts/pages/WorldCup2014.js"></script>
+}
