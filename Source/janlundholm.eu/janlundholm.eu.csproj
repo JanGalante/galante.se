@@ -28,6 +28,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -536,13 +537,13 @@
     <Folder Include="Other\References\MySQL\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business Layer\Business Layer.csproj">
+    <ProjectReference Include="..\Business Layer\galante.se.BusinessLayer.csproj">
       <Project>{6ada4fe7-6cc1-4de7-826e-ab49c13b4569}</Project>
-      <Name>Business Layer</Name>
+      <Name>galante.se.BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data Layer\Data Layer.csproj">
+    <ProjectReference Include="..\Data Layer\galante.se.DataLayer.csproj">
       <Project>{caecbde8-671e-4975-b378-72f60c855237}</Project>
-      <Name>Data Layer</Name>
+      <Name>galante.se.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

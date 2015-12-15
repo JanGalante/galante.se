@@ -113,9 +113,9 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data Layer\Data Layer.csproj">
+    <ProjectReference Include="..\Data Layer\galante.se.DataLayer.csproj">
       <Project>{CAECBDE8-671E-4975-B378-72F60C855237}</Project>
-      <Name>Data Layer</Name>
+      <Name>galante.se.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
