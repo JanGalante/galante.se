@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!-- saved from url=(0064)http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx -->
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Piyush Shah's Blog : VS 2005 not loading project on IIS 7 and Vista</TITLE>
+<META name="keywords" content="Vista,IIS 7">
+<META name="description" content="If you get this error when loading a Web Application project on Visual Studio 2005 running on Vista and IIS 7 - &quot;Unable to read the project file &#39;xxx.csproj&#39;. The Web Application Project xxx is configured to use IIS. To access local IIS Web sites, you">
+<META name="GENERATOR" content="CommunityServer 2.1 SP1 (Build: 61025.2)">
+<LINK rel="pingback" href="http://blogs.msdn.com/shahpiyush/pingback.aspx">
+<LINK rel="stylesheet" href="./VS 2005 not loading project on IIS 7 and Vista_files/style.css" type="text/css" media="screen">
+<LINK rel="stylesheet" href="./VS 2005 not loading project on IIS 7 and Vista_files/print.css" type="text/css" media="print">
+<LINK rel="shortcut icon" type="image/ico" href="http://blogs.msdn.com/favicon.ico">
+<LINK rel="alternate" type="application/rss+xml" title="Piyush Shah&#39;s Blog (RSS 2.0)" href="http://blogs.msdn.com/shahpiyush/rss.xml">
+<LINK rel="alternate" type="application/atom+xml" title="Piyush Shah&#39;s Blog (Atom 1.0)" href="http://blogs.msdn.com/shahpiyush/atom.xml">
+<LINK rel="alternate" type="application/rss+xml" title="VS 2005 not loading project on IIS 7 and Vista Comment RSS (RSS 2.0)" href="http://blogs.msdn.com/shahpiyush/commentrss.aspx?PostID=3028325">
+
+	<SCRIPT src="./VS 2005 not loading project on IIS 7 and Vista_files/global.js" type="text/javascript"></SCRIPT>
+</HEAD><BODY>
+<FORM name="aspnetForm" method="post" action="./VS 2005 not loading project on IIS 7 and Vista_files/VS 2005 not loading project on IIS 7 and Vista.htm" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<DIV>
+<INPUT type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<INPUT type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<INPUT type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMyNjg0MDc1MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFI2N0bDAwJF8kY3RsMDAkXyRicyRfJHdzJF8kU2VhcmNoQm94BSpjdGwwMCRfJGN0bDAwJF8kY3RsMDEkXyRmb3JtJF8kY2hrUmVtZW1iZXJnjsQHatjJUAuJV4DOJuvhEgI10g==">
+</DIV>
+
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+
+<SCRIPT src="./VS 2005 not loading project on IIS 7 and Vista_files/WebResource.axd" type="text/javascript"></SCRIPT>
+
+<SCRIPT language="javascript" type="text/javascript" src="./VS 2005 not loading project on IIS 7 and Vista_files/Telligent_Modal.js"></SCRIPT><SCRIPT language="javascript" type="text/javascript">
+// <![CDATA[
+Telligent_Modal.Configure('/utility/loading.htm',['Modal'],['ModalTitle'],['ModalClose'],['ModalContent'],['ModalFooter'],['ModalResize'],['ModalMask'],100);
+// ]]>
+</SCRIPT>
+<SCRIPT src="./VS 2005 not loading project on IIS 7 and Vista_files/WebResource(1).axd" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</SCRIPT>
+
+			
+<DIV id="masthead">
+	
+		<DIV id="welcome" align="right">
+			
+					Welcome to MSDN Blogs
+<A id="ctl00___ctl00___duw1_ac1___Login" href="http://blogs.msdn.com/login.aspx?ReturnUrl=%2fshahpiyush%2farchive%2f2007%2f06%2f01%2f3028325.aspx">Sign in</A> | <A id="ctl00___ctl00___duw1_ac1___Register" href="http://blogs.msdn.com/user/CreateUser.aspx?ReturnUrl=/shahpiyush/archive/2007/06/01/3028325.aspx">Join</A>
+
+
+
+				
+			 | 
+			<A id="ctl00___ctl00___duw1_Faq1" href="http://blogs.msdn.com/languages/en-US/docs/faq.aspx">Help</A>
+		</DIV>
+	
+</DIV>
+<DIV id="wrapper">
+	<DIV id="container">
+		<DIV id="header">
+			
+<DIV id="title"><P id="tagline">Senior Dev Lead @ Microsoft</P>
+<H1><A id="ctl00___ctl00___bth___BlogTitle" class="headermaintitle" href="http://blogs.msdn.com/shahpiyush/default.aspx">Piyush Shah's Blog</A></H1>
+</DIV>
+
+		</DIV>
+		<DIV id="contentwrapper">
+			<DIV id="sidebar-a">
+				
+<DIV id="BlogLinksSideBar">
+	
+<DIV id="WeblogLinks">
+<H3>This Blog</H3>
+<UL>
+    
+	
+	<LI><A id="ctl00___ctl00___bs___wl___Contactlink1" href="http://blogs.msdn.com/shahpiyush/contact.aspx">Email</A></LI>
+</UL>
+</DIV>
+</DIV>
+
+<DIV id="TasksSideBar">
+	
+</DIV>
+
+<DIV id="SubscriptionsSideBar">
+	
+<DIV id="Subscriptions">
+ <H3>Syndication</H3>
+    <UL>
+        <LI><A id="ctl00___ctl00___bs___bs___rss" href="http://blogs.msdn.com/shahpiyush/rss.xml">RSS 2.0</A></LI>
+        <LI><A id="ctl00___ctl00___bs___bs___atom" href="http://blogs.msdn.com/shahpiyush/atom.xml">Atom 1.0</A></LI>
+    </UL>
+ </DIV>
+</DIV>
+
+<DIV id="SearchSideBar">
+	
+	
+<DIV id="Search">
+<H3>Search</H3>
+<UL><LI>
+<INPUT name="ctl00$_$ctl00$_$bs$_$ws$_$SearchBox" type="text" id="ctl00___ctl00___bs___ws___SearchBox" class="searchBox" onkeydown="KeyDownHandlerctl00___ctl00___bs___ws___SearchButton(event);"> <A id="ctl00___ctl00___bs___ws___SearchButton" href="javascript:__doPostBack('ctl00$_$ctl00$_$bs$_$ws$_$SearchButton','')">Go</A>
+</LI></UL>
+</DIV>
+	
+</DIV>
+
+<DIV id="TagSideBar">
+	<H3>Tags</H3>
+	<UL>
+	<UL class="SidebarTagCloud">
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/ajax/default.aspx" rel="tag">ajax</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/ASP.Net/default.aspx" rel="tag">ASP.Net</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/ATOM/default.aspx" rel="tag">ATOM</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/C_2300_/default.aspx" rel="tag">C#</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Channel9/default.aspx" rel="tag">Channel9</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/client+templates/default.aspx" rel="tag">client templates</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Consume/default.aspx" rel="tag">Consume</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Feed/default.aspx" rel="tag">Feed</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Firefox+extensions/default.aspx" rel="tag">Firefox extensions</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Gadget/default.aspx" rel="tag">Gadget</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Google/default.aspx" rel="tag">Google</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/IIS+7/default.aspx" rel="tag">IIS 7</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Javascript/default.aspx" rel="tag">Javascript</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Javascript+Simple+Syndication/default.aspx" rel="tag">Javascript Simple Syndication</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/JSON/default.aspx" rel="tag">JSON</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/JSS/default.aspx" rel="tag">JSS</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/LINQ/default.aspx" rel="tag">LINQ</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Master+Pages/default.aspx" rel="tag">Master Pages</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/MSDN/default.aspx" rel="tag">MSDN</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/NTAccount/default.aspx" rel="tag">NTAccount</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Opml/default.aspx" rel="tag">Opml</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Orcas/default.aspx" rel="tag">Orcas</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Publish/default.aspx" rel="tag">Publish</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/registermarkupextension/default.aspx" rel="tag">registermarkupextension</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/RSS/default.aspx" rel="tag">RSS</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/RSSToolkit/default.aspx" rel="tag">RSSToolkit</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Security+Group/default.aspx" rel="tag">Security Group</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/SecurityIdentifier/default.aspx" rel="tag">SecurityIdentifier</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/sys.observer/default.aspx" rel="tag">sys.observer</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/sys.ui.dataview/default.aspx" rel="tag">sys.ui.dataview</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/sys.ui.templates/default.aspx" rel="tag">sys.ui.templates</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Translate/default.aspx" rel="tag">Translate</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Video/default.aspx" rel="tag">Video</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/ViewState/default.aspx" rel="tag">ViewState</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/VirtualPathProvider/default.aspx" rel="tag">VirtualPathProvider</A></LI>
+<LI class="Tag1"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Vista/default.aspx" rel="tag">Vista</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/Visual+Studio/default.aspx" rel="tag">Visual Studio</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/XmlSerialization/default.aspx" rel="tag">XmlSerialization</A></LI>
+<LI class="Tag6"><A href="http://blogs.msdn.com/shahpiyush/archive/tags/XSL/default.aspx" rel="tag">XSL</A></LI>
+</UL>
+
+	</UL>
+</DIV>
+
+<DIV id="NewsSideBar">
+	
+<H3>News</H3>
+<DIV id="news"><A href="http://www3.clustrmaps.com/counter/maps.php?url=http://blogs.msdn.com/shahpiyush"><IMG src="./VS 2005 not loading project on IIS 7 and Vista_files/blogs.msdn.com-shahpiyush-thumb.jpg" border="0">
+</A>
+</DIV>
+</DIV>
+
+<DIV id="ArchiveSideBar">
+	
+	
+<H3>Archives</H3>
+<UL>
+
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2009/03.aspx">March 2009 (1)</A>
+        </LI>
+    
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2009/02.aspx">February 2009 (1)</A>
+        </LI>
+    
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2007/06.aspx">June 2007 (3)</A>
+        </LI>
+    
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2007/05.aspx">May 2007 (5)</A>
+        </LI>
+    
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2007/04.aspx">April 2007 (3)</A>
+        </LI>
+    
+        <LI>
+            <A href="http://blogs.msdn.com/shahpiyush/archive/2007/03.aspx">March 2007 (1)</A>
+        </LI>
+    
+</UL>
+	
+</DIV>
+
+<DIV id="LinkSideBar">
+	
+
+	
+</DIV>
+			</DIV>
+			<DIV id="content"><DIV id="content2">
+				
+        
+
+<DIV class="post">
+	<DIV class="postsub">			
+		<H2>VS 2005 not loading project on IIS 7 and Vista</H2>
+		<P>If you get this error when loading a Web Application project on Visual Studio 2005 running on Vista and IIS 7 - </P>
+<P><STRONG>"Unable to read the project file 'xxx.csproj'. The Web Application Project xxx is configured to use IIS. To access local IIS Web sites, you must install all of the following components:</STRONG></P>
+<P><STRONG>Internet Information Services.</STRONG></P>
+<P><STRONG>IIS 6 Metabase and IIS 6 Configuration Compatibility</STRONG></P>
+<P><STRONG>ASP.Net</STRONG></P>
+<P><STRONG>In addition, you must run Visual Studio in the context of an administrator account........"</STRONG></P>
+<P><STRONG></STRONG>&nbsp;</P>
+<P><IMG title="IIS 7 error on VS 2005 and Vista" alt="IIS 7 error on VS 2005 and Vista" src="./VS 2005 not loading project on IIS 7 and Vista_files/original.aspx" mce_src="http://blogs.msdn.com/photos/shahpiyush/images/3028341/original.aspx"></P>
+<P>Do the following - </P>
+<LI>Run VS.Net 2005 as Administrator - On the VS.Net 2005 shortcut, right click, Properties-Compatability and check the <B>Run as administrator</B> box is checked. 
+</LI><LI>Check if ASP.NET is installed: Go to <B>Control Panel</B> - <B>Programs and Features </B>- <B>Turn Windows features on or off</B> - <B>Internet Information Services</B> -<B>World Wide Web Services</B> - <STRONG>Application Development Features - Check ASP.Net option.</STRONG>&nbsp; 
+</LI><LI>Make sure the IIS 6 compatibility is installed: Go to <B>Control Panel</B> - <B>Programs and Features </B>- <B>Turn Windows features on or off</B> - <B>Internet Information Services</B>&nbsp;- <B>Web Management Tools</B> - <B>IIS 6 Management Compatibility</B> - Check all of them.</LI>
+		<DIV class="postfoot">
+			Published
+			Friday, June 01, 2007 7:07 PM
+			by
+			<A id="ctl00___ctl00___ctl01___Entry___AuthorLink" href="http://blogs.msdn.com/user/Profile.aspx?UserID=71251">shahpiyush</A>
+			
+			
+			<DIV><SPAN id="ctl00___ctl00___ctl01___Entry___InlineTagEditorPanel">Filed under: <A href="http://blogs.msdn.com/shahpiyush/archive/tags/Vista/default.aspx" rel="tag">Vista</A>, <A href="http://blogs.msdn.com/shahpiyush/archive/tags/IIS+7/default.aspx" rel="tag">IIS 7</A></SPAN><INPUT type="hidden" name="ctl00$_$ctl00$_$ctl01$_$Entry$_$InlineTagEditorPanel" id="ctl00___ctl00___ctl01___Entry___InlineTagEditorPanel_State" value="nochange"></DIV>
+			
+		</DIV>
+	</DIV>
+</DIV>
+
+<DIV id="postToolbar">
+<H2 class="CommonSubTitle">Comment Notification</H2>
+<P>
+	If you would like to receive an email when updates are made to this post, please register <A id="ctl00___ctl00___ctl01___DetailedSubBar___RegisterLink" href="http://blogs.msdn.com/user/CreateUser.aspx?ReturnUrl=/shahpiyush/archive/2007/06/01/3028325.aspx">here</A>
+	
+</P>
+<P>
+	Subscribe to this post's comments using
+	<A id="ctl00___ctl00___ctl01___DetailedSubBar___CommentRssLink" href="http://blogs.msdn.com/shahpiyush/commentrss.aspx?PostID=3028325">RSS</A>
+</P>
+</DIV>
+
+<H3>
+	Comments
+</H3>
+	<DIV id="comments">
+	
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl00_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#3865872">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="3865872"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Saturday, July 14, 2007 10:07 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl00_NameLink" title="andrewstan" href="http://blogs.msdn.com/user/Profile.aspx?UserID=91068" target="_blank">andrewstan</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>I have done all that's required and am still getting this error.</P>
+<P>I can access the local website with the browser but I cannot open it with VS.</P>
+<P>Running clean install of Vista Business with VS2005. All SPs and updates installed.</P>
+<P>Any help appreciated.</P>
+<P>Andrew</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="commentowner">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl01_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#3868948">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="3868948"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Saturday, July 14, 2007 2:36 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl01_NameLink" title="shahpiyush" href="http://blogs.msdn.com/user/Profile.aspx?UserID=71251" target="_blank">shahpiyush</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Are you getting the same error as above? That error message is cryptic and generic at the same time. There may be many possible errors types with this same message.</P>
+<P>If you have not found a solution already, I would post in iis.net forums.</P>
+<P>Here are a few links I found on IIS.net forums - </P>
+<P><A rel="nofollow" target="_new" href="http://forums.iis.net/t/1073894.aspx">http://forums.iis.net/t/1073894.aspx</A></P>
+<P><A rel="nofollow" target="_new" href="http://forums.iis.net/t/1037444.aspx">http://forums.iis.net/t/1037444.aspx</A></P>
+<P><A rel="nofollow" target="_new" href="http://forums.iis.net/blogs/mvolo/archive/2006/12/28/fix-problems-with-visual-studio-f5-debugging-of-asp-net-applications-on-iis7-vista.aspx">http://forums.iis.net/blogs/mvolo/archive/2006/12/28/fix-problems-with-visual-studio-f5-debugging-of-asp-net-applications-on-iis7-vista.aspx</A></P>
+<P>Hope this helps.</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl02_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#5485974">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="5485974"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Wednesday, October 17, 2007 3:29 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl02_NameLink" title="Sinewy" target="_blank">Sinewy</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Thank GOD!!! I found this page </P>
+<P>Thank you very much</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl03_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#5672685">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="5672685"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Thursday, October 25, 2007 12:42 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl03_NameLink" title="Rafae;" target="_blank">Rafae;</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>VS 2005 used to work perfect but out of the blue I started getting the error when I try to open any of the solutions I have successfully created and worked with in the past. I have not installed anything else to cause and I double checked the troubleshoot list: ASP.NET and IIS are installed and I run VS 2005 as an admin.</P>
+<P>Anyone has an idea what may have caused it? </P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl04_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#5673267">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="5673267"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Thursday, October 25, 2007 1:06 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl04_NameLink" title="RafaelNenninger" href="http://blogs.msdn.com/user/Profile.aspx?UserID=106211" target="_blank">RafaelNenninger</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Actually I reviewed Program and Features and the last application I installed was Silverlight...</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl05_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#7529604">#</A>
+		    <SPAN>VS 2005 not loading project on IIS 7 and Vista &amp;laquo; A Digital Idea<A name="7529604"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Thursday, February 07, 2008 7:14 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl05_NameLink" rel="nofollow" title="TrackBack" href="http://christianpayne.com.au/2008/02/08/vs-2005-not-loading-project-on-iis-7-and-vista/" target="_blank">VS 2005 not loading project on IIS 7 and Vista « A Digital Idea</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>PingBack from <A rel="nofollow" target="_new" href="http://christianpayne.com.au/2008/02/08/vs-2005-not-loading-project-on-iis-7-and-vista/">http://christianpayne.com.au/2008/02/08/vs-2005-not-loading-project-on-iis-7-and-vista/</A></P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl06_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#8332990">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="8332990"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Monday, March 24, 2008 12:31 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl06_NameLink" title="Rahul" target="_blank">Rahul</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>thanx.....</P>
+<P>i was also getting this error....</P>
+<P>working on it... hope it gets solved....</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl07_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#8337828">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="8337828"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Wednesday, March 26, 2008 10:35 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl07_NameLink" title="hamid" target="_blank">hamid</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Thanks alot. It worked for me.</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl08_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#8423320">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="8423320"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Thursday, April 24, 2008 11:42 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl08_NameLink" title="sailakfan" target="_blank">sailakfan</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Thank you so much. &nbsp;Have been struggling all day. &nbsp;This fixed my issue. &nbsp;Really appreciate it.</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl09_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#8463020">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="8463020"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Tuesday, May 06, 2008 9:40 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl09_NameLink" title="Rupak Ganguly" rel="nofollow" href="http://developershelf.blogspot.com/" target="_blank">Rupak Ganguly</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>I had the same error and I fixed it. I had other issues with Vista SP1, VS 2005 and IIS 7 and I have written a post here <A rel="nofollow" target="_new" href="http://developershelf.blogspot.com/2008/05/problem-loading-iis7-hosted-wap.html">http://developershelf.blogspot.com/2008/05/problem-loading-iis7-hosted-wap.html</A></P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl10_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#8591022">#</A>
+		    <SPAN>solution for programs not loading on vista<A name="8591022"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Wednesday, June 11, 2008 4:12 AM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl10_NameLink" rel="nofollow" title="TrackBack" href="http://javon.yoursitedesigns.com/solutionforprogramsnotloadingonvista.html" target="_blank">solution for programs not loading on vista</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>PingBack from <A rel="nofollow" target="_new" href="http://javon.yoursitedesigns.com/solutionforprogramsnotloadingonvista.html">http://javon.yoursitedesigns.com/solutionforprogramsnotloadingonvista.html</A></P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl11_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#9270723">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="9270723"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Saturday, January 03, 2009 6:01 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl11_NameLink" title="Dave" target="_blank">Dave</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Great stuff. This solved the problem for me.</P>
+<P>Have a great day dude!</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl12_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#9508122">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="9508122"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Wednesday, March 25, 2009 3:12 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl12_NameLink" title="Philip" rel="nofollow" href="http://www.blignaut.co.za/" target="_blank">Philip</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>If it weren't for dearest GOOGLE, I would never have found this! &nbsp;MSDN just ignores it OWN blogs in searches. &nbsp;I am happy to report that I am now able to create web sites on Vista x64 using VS2008!!!!</P>
+<P>Kindest regards,</P>
+<P>Smiling Philip</P>
+ </DIV>
+		</DIV>
+		
+		<DIV class="comment">
+		<H4><A id="ctl00___ctl00___ctl01___Comments___Comments_ctl13_PermaLink" title="permalink" href="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx#9603664">#</A>
+		    <SPAN>re: VS 2005 not loading project on IIS 7 and Vista<A name="9603664"></A></SPAN>
+		</H4><DIV class="commentssubhead"><SPAN class="commentspan"></SPAN>Monday, May 11, 2009 1:26 PM by <A id="ctl00___ctl00___ctl01___Comments___Comments_ctl13_NameLink" title="Walter" target="_blank">Walter</A>
+				</DIV>
+		<DIV class="commentsbody">
+		        <P>Thank you Piyush Shah, it worked perfectly! The error msg said exactly what to do and I chose to ignore it and search for this instead, Go figure?</P>
+ </DIV>
+		</DIV>
+		
+
+</DIV>
+
+	
+
+
+	
+<DIV id="commentform">
+<H3>Leave a Comment</H3>
+
+    <DL>
+        <DT><LABEL for="ctl00___ctl00___ctl01___form___tbTitle">Title</LABEL> <EM>(required)</EM><SPAN id="ctl00___ctl00___ctl01___form___Requiredfieldvalidator1" style="color:Red;visibility:hidden;">*</SPAN></DT>
+        <DD><INPUT name="ctl00$_$ctl00$_$ctl01$_$form$_$tbTitle" type="text" value="re: VS 2005 not loading project on IIS 7 and Vista" id="ctl00___ctl00___ctl01___form___tbTitle" class="smallbox"></DD>
+        
+        <DT id="ctl00___ctl00___ctl01___form___NameTitle"><LABEL for="ctl00___ctl00___ctl01___form___tbName">Name</LABEL> <EM>required</EM><SPAN id="ctl00___ctl00___ctl01___form___Requiredfieldvalidator2" style="color:Red;visibility:hidden;">*</SPAN></DT><DD id="ctl00___ctl00___ctl01___form___NameDesc"><INPUT name="ctl00$_$ctl00$_$ctl01$_$form$_$tbName" type="text" id="ctl00___ctl00___ctl01___form___tbName" class="smallbox"></DD>
+        
+        <DT><LABEL for="ctl00___ctl00___ctl01___form___tbUrl">Your URL</LABEL> </DT>
+        <DD><INPUT name="ctl00$_$ctl00$_$ctl01$_$form$_$tbUrl" type="text" id="ctl00___ctl00___ctl01___form___tbUrl" class="smallbox"></DD>
+        
+        <DT><LABEL for="ctl00___ctl00___ctl01___form___tbComment">Comments</LABEL> <EM>(required)</EM><SPAN id="ctl00___ctl00___ctl01___form___Requiredfieldvalidator3" style="color:Red;visibility:hidden;">*</SPAN></DT>
+        <DD><TEXTAREA name="ctl00$_$ctl00$_$ctl01$_$form$_$tbComment" rows="5" cols="25" id="ctl00___ctl00___ctl01___form___tbComment"></TEXTAREA></DD>
+
+        <DT><INPUT id="ctl00___ctl00___ctl01___form___chkRemember" type="checkbox" name="ctl00$_$ctl00$_$ctl01$_$form$_$chkRemember"><LABEL for="ctl00___ctl00___ctl01___form___chkRemember">Remember Me?</LABEL></DT>
+
+        <DT><INPUT type="submit" name="ctl00$_$ctl00$_$ctl01$_$form$_$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$_$ctl00$_$ctl01$_$form$_$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00___ctl00___ctl01___form___btnSubmit"></DT>
+    </DL>
+</DIV>
+
+
+
+	
+   
+    
+			</DIV></DIV>
+			<DIV id="contentfooter">&nbsp;</DIV>
+		</DIV>
+		<DIV id="footer">
+			
+<DIV>
+© 2009 Microsoft Corporation. All rights reserved.
+<A href="http://msdn2.microsoft.com/en-us/cc300389.aspx">Terms of Use</A> &nbsp;|&nbsp; 
+<A href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</A> &nbsp;|&nbsp; 
+<A href="http://privacy.microsoft.com/en-us/default.aspx">Privacy Statement</A>
+</DIV>
+
+		</DIV>
+	</DIV>
+</DIV>
+
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator1"), document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator2"), document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator3"));
+//]]>
+</SCRIPT>
+
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var ctl00___ctl00___ctl01___form___Requiredfieldvalidator1 = document.all ? document.all["ctl00___ctl00___ctl01___form___Requiredfieldvalidator1"] : document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator1");
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator1.controltovalidate = "ctl00___ctl00___ctl01___form___tbTitle";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator1.errormessage = "*";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator1.initialvalue = "";
+var ctl00___ctl00___ctl01___form___Requiredfieldvalidator2 = document.all ? document.all["ctl00___ctl00___ctl01___form___Requiredfieldvalidator2"] : document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator2");
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator2.controltovalidate = "ctl00___ctl00___ctl01___form___tbName";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator2.errormessage = "*";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator2.initialvalue = "";
+var ctl00___ctl00___ctl01___form___Requiredfieldvalidator3 = document.all ? document.all["ctl00___ctl00___ctl01___form___Requiredfieldvalidator3"] : document.getElementById("ctl00___ctl00___ctl01___form___Requiredfieldvalidator3");
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator3.controltovalidate = "ctl00___ctl00___ctl01___form___tbComment";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator3.errormessage = "*";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00___ctl00___ctl01___form___Requiredfieldvalidator3.initialvalue = "";
+//]]>
+</SCRIPT>
+
+<SCRIPT language="javascript" type="text/javascript">
+<!--
+function KeyDownHandlerctl00___ctl00___bs___ws___SearchButton(event)
+{
+	if (event.keyCode == 13)
+	{
+		event.returnValue = false;
+		event.cancel = true;
+     __doPostBack('ctl00$_$ctl00$_$bs$_$ws$_$SearchButton','')	}
+}
+
+//-->
+</SCRIPT>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx"
+dc:identifier="http://blogs.msdn.com/shahpiyush/archive/2007/06/01/3028325.aspx"
+dc:title="VS 2005 not loading project on IIS 7 and Vista"
+trackback:ping="http://blogs.msdn.com/shahpiyush/trackback.aspx?PostID=3028325" />
+</rdf:RDF>
+-->
+
+<SCRIPT type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</SCRIPT>
+</FORM>
+
+<SCRIPT type="text/javascript" src="./VS 2005 not loading project on IIS 7 and Vista_files/omni_rsid_blogs.js"></SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+
+<!-- WT MT Inline v.2.0 -->
+<SCRIPT type="text/javascript">
+var gTrackEvents=0;
+var gDomain="m.webtrends.com";
+var gDcsId="dcsrubpmj00000oqcq95ilr3l_8q8i";
+var gFpc="WT_FPC";
+if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}
+</SCRIPT><SCRIPT type="text/javascript" src="./VS 2005 not loading project on IIS 7 and Vista_files/wtid.js"></SCRIPT>
+<SCRIPT src="./VS 2005 not loading project on IIS 7 and Vista_files/wt.js" type="text/javascript"></SCRIPT>
+<NOSCRIPT></NOSCRIPT>
+
+<IMG src="./VS 2005 not loading project on IIS 7 and Vista_files/trans_pixel.aspx" width="0" height="0" alt="Page view tracker">
+
+
+
+</BODY></HTML>

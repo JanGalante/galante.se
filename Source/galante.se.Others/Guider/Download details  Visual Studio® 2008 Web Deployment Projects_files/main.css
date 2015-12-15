@@ -1,0 +1,738 @@
+body,table{
+font-size:100%;
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+body, form, input, table, td, button{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+input, select{font-size:1em;}
+h1{
+font-size:1.3em;
+font-weight:normal;
+}
+h2{font-size:.95em;}
+h4{font-size:.8em;margin-bottom:.3em;}
+h5{font-size:.8em;margin-bottom:5px;}
+body, div, form, table, td{
+margin:0;
+padding:0;
+}
+img, a img{
+border:0 none;
+}
+p{
+font-size:.7em;
+line-height:1.3em;
+margin-bottom:0;
+}
+ul , ol{
+margin-bottom:.3em;
+margin-top:.3em;
+}
+li{
+padding-bottom:3px;
+padding-top:3px;
+}
+hr{
+border:none 0;
+border-bottom:solid 1px #E2E2E4;
+height:1px;
+margin:-3px 0 -3px 0;
+padding:0;
+}
+div.pageMargin{
+margin:20px 20px 50px 20px;
+}
+a, a:link{color:#0033cc}
+a:visited{color:#800080}
+a:active,a:hover{color:#ff6600}
+
+option.disabled{color:#808080;}
+
+/* START MNP styles */
+.mnpMenuRow a {color:#000000;}
+/* END MNP styles */
+
+/* START basic search */
+#quicksearch{
+background:#F1F1F1;
+border-bottom:solid 1px #999999;
+padding:2px;
+}
+div#quicksearch span, div#quicksearch input, div#quicksearch select, div#quicksearch a{
+margin:0 2px;
+}
+div#quicksearch a{
+margin-left:10px;
+}
+div#quicksearch .textinput{
+width:190px;
+}
+/* the position:relative on this span should not be present for RTL languages */
+div#quicksearch span, div#quicksearch label{
+white-space:nowrap;
+}
+div#quicksearch td{
+font-size:.7em;
+line-height:1.5em;
+vertical-align:baseline;
+}
+.searchBtn{
+font-size:1em;
+}
+/* END basic search */
+
+/* START home page */
+div#homeBack{background:#C4C9D6;}
+div#home div.pageMargin{margin-top:-10px;}
+div#home{
+background:#FFFFFF;
+border-right:solid 1px #999999;
+height:100%;
+width:587px;
+}
+div#home h4{
+border-bottom:solid 1px #E2E2E4;
+padding:0 0 5px 0;
+margin-bottom:5px;
+}
+/* START Popular List(s) */
+div.popular{
+margin:0 0 1.2em 0;
+}
+div.popular p{
+font-weight:bold;
+margin:4px 0 0 0;
+}
+div.popular ol{
+font-size:.7em;
+margin-bottom:0;
+}
+/* END Popular List(s) */
+/* START Products and Categories Lists */
+div#prodCatList h5 {
+font-size:.7em;
+}
+div#prodCatList p{
+font-size:.7em;
+margin:1px auto 10px;
+line-height:1.25em;
+}
+div#prodCatList a{
+font-size:.7em;
+}
+div#prodCatList table{
+margin:0 10px;
+}
+div#prodCatList td{
+vertical-align:top;
+width:50%;
+}
+/* TODO - do this spacing differently if possible... */
+div#prodCatList td.space{
+padding:0 39px 0 0;
+width:0;
+}
+/* END Products and Categories Lists */
+/* END home page */
+
+/* START News banner */
+#nh{
+width:587px;
+background-color:#1F1F1F;
+color:#FFFFFF;
+font-size:.7em;
+padding:8px 0 9px 0;
+border-top:1px solid #ffffff;
+}
+#nh span{
+margin-left:11px; 
+font-weight:bold;
+color:#FF3300;
+}
+#nh a, #nh a:visited{
+color:#FFFFFF;
+text-decoration: none;
+}
+#nh a:hover {text-decoration:underline;}
+/* END News banner */
+
+/* START Collections control */
+div#collection{
+background:#999999;
+}
+/* START 3 part hero story */
+div#herostory3part{
+height:203px;
+}
+div#herostory3part table{
+background:Transparent;
+margin:-1px;
+}
+.mainhero{
+border-right:solid 1px white;
+}
+.sub1hero, .sub2hero{
+border-left:solid 1px white;
+}
+.sub1hero{
+border-bottom:solid 1px white;
+}
+.sub2hero{
+border-top:solid 1px white;
+}
+/* END 3 part hero story */
+
+/* basic hero story needs nothing extra */
+
+/* START Header (for collections, category, and products browsing) */
+div#CollectionHeader{
+margin:20px 20px 30px 20px;
+padding:0;
+}
+div#CollectionHeader h1{
+font-weight:normal;
+margin:0;
+width:auto;
+height:31px;
+max-height:31px;
+}
+div#CollectionHeader p{
+margin:0;
+padding:0;
+}
+/* END Header */
+
+/* START Default */
+div#collectionDefault div{
+padding:0 0 0 17px;
+position:static;
+}
+div#collectionDefault h1{
+color:#000066;
+font-size:2.25em;
+font-weight:normal;
+margin:0;
+padding:22px 0 0 0;
+}
+div#collectionDefault h2{
+color:#ffffff;
+margin:0;
+padding:0 0 0 3px;
+position:relative;
+top:-4px;
+}
+div#collectionDefault p{
+margin-top:0;
+padding-left:20px;
+}
+/* END Default */
+div#dcTopDivider{
+padding:0 0 12px;
+background:#999999 url(../../img/shelf.gif) repeat-x bottom;
+}
+/* START Spots */
+div.feature{
+min-height:65px;
+margin:15px 5px 30px 0;
+zoom:1;
+}
+div.feature img.ad{
+float:left;
+margin-right:10px;
+}
+div.feature p{
+margin:5px 0 0 0;
+}
+div.feature a{
+font-size:.7em;
+font-weight:bold;
+}
+/* END Spots */
+/* END Collections control */
+
+/* START rounded corners */
+.topCorners, .bottomCorners{display:block; height:5px; overflow:hidden; padding:0;}
+.topCorners *, .bottomCorners *{display:block; height:1px; overflow:hidden; padding:0; line-height:1px; font-size:1px;}
+.l1{margin:0 5px}
+.l2{margin:0 3px}
+.l3{margin:0 2px}
+.l4{margin:0 1px; height:2px}
+/* zoom:1; is to force IE to have "layout" for this element so the bottom corners that follow it don't go funny... */
+.styledPanel{zoom:1;}
+/* END rounded corners */
+
+/* START Personalization */
+#recommended{
+clear:both;
+margin:1.32em 0 auto -10px;
+}
+#browse #recommended{margin-right:-10px}
+#recommended ol{
+font-size:.7em;
+margin-bottom:0;
+padding-bottom:2px;
+}
+#recommended .styledPanel{
+padding:0 10px;
+background: #EBF2FA;
+}
+#recommended .styledPanel h4{
+background:#7FB6CB;
+border-bottom:solid 1px #999999;
+margin:0 -10px 8px;
+padding:0 10px 5px 10px;
+}
+#recommended .styledPanel{padding-bottom:6px}
+#recommended h4 a{
+font-size:.85em;
+font-weight:normal;
+}
+#recommended .l2{border-left:solid 2px #999999; border-right:solid 2px #999999;}
+#recommended .l3, #recommended .l4, #recommended .styledPanel{border-left:solid 1px #999999; border-right:solid 1px #999999;}
+#recommended .l1{background:#999999;}
+#recommended .topCorners .l2,#recommended .topCorners .l3,#recommended .topCorners .l4{background:#7FB6CB;}
+#recommended .bottomCorners .l2,#recommended .bottomCorners .l3,#recommended .bottomCorners .l4{background:#EBF2FA;}
+/* END Personalization */
+
+/* START Browse */
+#browseResults{
+clear:both;
+margin:0px -10px auto -10px;
+}
+#browseResults .styledPanel{
+padding:5px 10px 0 10px;
+}
+#browseResults .l2 {border-left:solid 2px #CBE7F6; border-right:solid 2px #CBE7F6;}
+#browseResults .l3, #browseResults .l4, #browseResults .styledPanel {border-left:solid 1px #CBE7F6; border-right:solid 1px #CBE7F6;}
+#browseResults .l1 {background:#CBE7F6;}
+#eyebrow{
+font-size:.7em;
+margin:0 20px 0 20px;
+padding-top:12px;
+}
+div#browseForm{
+border-bottom:solid 1px #CBE7F6;
+padding-bottom:6px;
+}
+div#browseForm input{
+font-size:.7em;
+}
+div#browseForm select{
+font-size:.7em;
+margin-right:8px
+}
+#browseResults h4{
+margin-top:0;
+}
+/* START Results */
+#results table{
+clear:both;
+}
+#results th *{
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+#results th{
+margin:0;
+padding:0;
+border-top:1px solid #82A7D4;
+border-bottom:1px solid #D8E8F5;
+}
+#results th#start{
+border-left:1px solid #D7E9F5;
+}
+#results th#end{
+border-right:1px solid #5392D7;
+}
+#results th a{
+display:block;
+width:100%;
+text-decoration:none;
+text-align:left;
+border:1px solid;
+border-top-color:#FFFFFF;
+border-right-color:#82A7D4;
+border-bottom-color:#B6D6E1;
+border-left-color:#FFFFFF;
+background:#D8EAF5;
+font-size:70%;
+font-weight:bold;
+color:#00329B;
+padding:3px;
+}
+#results th a:hover,#results th a:visited{
+color:#00329B;
+}
+#results th a:hover,#results th a.selected:hover{
+background:#ABCDEB;
+}
+#results th a.selected:hover,#results th a.selected:visited{
+color:#FFFFFF;
+}
+#results th a.selected{
+border-top-color:#3C6593;
+border-right-color:#C2DBEF;
+border-bottom-color:#C2DBEF;
+border-left-color:#3C6593;
+background-color:#7FB1E2;
+color:#FFFFFF;
+}
+#results a p img{
+margin-right:3px;
+}
+#results th a.selected img{
+margin-left:3px;
+vertical-align:middle;
+}
+#results td{
+padding:12px 6px 13px 6px;
+border-bottom:1px solid #BDDBE5;
+}
+#results td.selected{
+background:#F2F3F3;
+}
+#results td p{
+margin-top:.1em;
+margin-bottom:.2em;
+}
+#results td a{
+font-weight:bold;
+}
+#results ul li{
+font-size:.7em;
+margin:2px 0;
+padding:0;
+}
+#results p#criteria{
+border-bottom:solid 1px #CBE7F6;
+}
+#results p#position, #results p#criteria{
+margin:0;
+padding:1em 0;
+}
+#results p#position span{
+margin:0 0 0 30px;
+}
+/* END Results */
+/* END Browse */
+
+/* START Advanced Search */
+div#advancedSearch{
+background-color:#EEF6FB;
+border:1px solid #B6D6E1;
+margin:7px 0 39px 0;
+padding:12px 0 14px 20px;
+}
+div#advancedSearch td{
+font-size:.7em;
+padding:5px 18px 5px 0;
+text-align:left;
+}
+div#advancedSearch .textinput, div#advancedSearch select{
+font-size:1em;
+width:25em;
+}
+div#advancedSearch .searchBtn{
+margin:-4px 0 10px;
+width:60px;
+}
+div#advancedSearch select.resultsNumber{
+width:90px;
+}
+p#advSearchDesc{
+margin:0 0 16px 0;
+}
+/* END Advanced Search */
+
+/* START details thankyou*/
+
+/* START details PageIndex */
+#onthispage{
+width:480px;
+}
+#onthispage div{
+width:220px;
+float:left;
+background-image:url(../../img/arrow_down.gif);
+background-position:left;
+background-repeat:no-repeat;
+padding-left:20px;
+padding-bottom:3px;
+vertical-align:top;
+font-family:Verdana,Arial;
+font-size:95%;
+}
+/* END details PageIndex */
+
+#detailsThankyouIntro{
+margin-bottom:16px;
+}
+#detailsThankyouIntro #logo{
+float:right;
+height:97px;
+margin-left:18px;
+width:168px;
+}
+#detailsThankyouIntro #logo img{
+float:left;
+}
+#detailsThankyouIntro #logo h4{
+font-size:.7em;
+margin:15px 0 4px 0;
+}
+#detailsThankyouIntro #logo p{
+font-size:.6em;
+margin:0;
+}
+#thankyou ul li{
+font-size:.7em;
+margin:4px 0;
+padding:0;
+}
+#relatedDownloads ul li{
+font-size:1em;
+}
+/* fix IE 3px bug */
+* html #detailsThankyouIntro #logo img{margin:0 -3px;}
+#detailsThankyouIntro h1{
+margin-bottom:5px;
+}
+#detailsThankyouIntro h2{
+font-weight:normal;
+margin-top:0em;
+margin-bottom:25px;
+}
+#quickDescription{
+font-size:.7em;
+padding:0;
+}
+
+/* START colored box */
+#genuineValidated #quickInfoHeader, #genuineValidated .topCorners * {background:#003399;color:#FFFFCC}
+#genuineValidated #quickInfoContents, #genuineValidated .bottomCorners * {background:#FCF4B5;}
+#genuineNotValidated #quickInfoHeader, #genuineNotValidated .topCorners * {background:#DEB031;color:#FFFFCC}
+#genuineNotValidated #quickInfoContents, #genuineNotValidated .bottomCorners * {background:#FCF4B5;}
+#regsysNotRegistered #quickInfoHeader, #regsysNotRegistered .topCorners * {background:#75A569;color:#FFFFFF}
+#regsysNotRegistered #quickInfoContents, #regsysNotRegistered .bottomCorners * {background:#E8F7E0;}
+#regsysRegistered #quickInfoHeader, #regsysRegistered .topCorners * {background:#308216;color:#FFFFFF}
+#regsysRegistered #quickInfoContents, #regsysRegistered .bottomCorners * {background:#E8F7E0;}
+#unRestricted #quickInfoHeader, #unRestricted .topCorners * {background:#82ADE2;color:#E5EFF8}
+#unRestricted #quickInfoContents, #unRestricted .bottomCorners * {background:#E5EFF8;}
+
+#genuineValidated, #genuineNotValidated, #regsysNotRegistered, #regsysRegistered,  #unRestricted{
+clear:both;
+display:block;
+margin:0 -10px;
+width:auto;
+padding-top:20px;
+}
+#genuineValidated hr, #genuineNotValidated hr{border-bottom:solid 1px #EFDF60;}
+#regsysNotRegistered hr, #regsysRegistered hr{border-bottom:solid 1px #8DC061;}
+#quickInfoContents hr{margin:0;padding:0;}
+#quickInfoContents td>hr{margin:5px 0;}
+
+#quickInfoContents,#quickInfoHeader{
+margin:0;
+padding:1px 10px 0.1em 10px;
+}
+#quickInfoHeader {
+font-weight:bold;
+font-size:.7em;
+height:22px;
+}
+#quickInfoHeader form{
+clear:none;
+float:left;
+margin:0;
+padding:0;
+}
+#quickInfoHeader input, #multiFileList button {
+font-size:1em;
+font-weight:bold;
+position:relative;
+top:-2px;
+}
+#multiFileList button {top:0}
+#quickInfoHeader div {
+display:inline;
+margin-left:5px;
+}
+#quickInfoHeader a img{
+vertical-align:bottom;
+}
+#quickInfoHeader a, #quickInfoHeader a:visited, #quickInfoHeader a:hover {
+color:#FFFFFF;
+font-weight:normal;
+padding:5px;
+}
+/*adjusts the table to 100% but not over the colored area*/
+#quickInfoContents table{
+margin-left:20px;
+width:100%;
+}
+/*adjusts the table to 100% but not over the colored area works for IE*/
+* html #quickInfoContents table{
+table-layout:fixed;
+width:auto;
+}
+div#quickInfoContents td{
+font-size:.7em;
+}
+td.quickInfoValue{
+margin-bottom:0;
+}
+div#quickInfoContents p{
+padding-bottom:10px;
+}
+#quickInfoContents td.quickInfoName {
+padding:5px 0;
+}
+#quickInfoContents td.quickInfoName{
+padding-right:30px;
+width:200px;
+}
+div#otherDownloadInfo{
+margin:0 0 12px 0;
+}
+div#otherDownloadInfo {
+}
+td#detailsDisclaimer {
+padding:5px 0;
+}
+div.detailsInfoLabel{
+font-weight:bold;
+padding-top:5px;
+padding-bottom:5px;
+}
+div.downloadInfo{
+font-size:.7em;
+margin:0 0 10px 20px;
+}
+div.detailsContent{
+font-size:.7em;
+line-height:130%;
+}
+/* END colored box */
+div#details p.topOfPage{
+border-bottom:solid 1px #E2E2E4;
+padding:0 0 10px 0;
+}
+div#affinity div{
+font-size:.7em;
+}
+/* START multi-file table */
+table#multiFileList{
+border-collapse:collapse;
+margin:15px 0;
+width:100%;
+}
+/*helps the table scale to design in IE*/
+* html table#multiFileList{
+table-layout:fixed;
+width:auto;
+}
+table#multiFileList th{
+font-size:.7em;
+padding:7px 20px;
+text-align:left;
+}
+table#multiFileList td{
+padding:4px 20px;
+}
+table#multiFileList .buttonCell{width:100px; padding-right:0px;padding-left:0px;font-size:.7em}
+table#multiFileList th#sizeCol{white-space:nowrap}
+table#multiFileList th#multiFileNameCol{width:50%}
+/* END multi-file table */
+div#relatedLinks{
+margin:-5px 0 15px 0;
+}
+div#gaTalkBack{
+border-top:solid 1px #D19638;
+border-bottom:solid 1px #D19638;
+margin:27px 0 30px 0;
+overflow:hidden;
+padding:0;
+}
+* html div#gaTalkBack{
+width:100%;
+}
+#gaTalkBack p{
+margin:5px 0 15px 0;
+}
+div#gaTalkBack div#color{
+margin:0 0 11px 0;
+background:#F8DF75;
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#DC9B3C', EndColorStr='#F8DF75');
+height:7px;
+font-size:1px;
+}
+div#gaTalkBack div#gabody{
+padding:0 0 0 20px;
+margin:0;
+}
+div#gaTalkBack h4{
+color:#C89225;
+margin:0;
+}
+div#gaAd,div#msnAd{
+float:right;
+margin:0 0 15px 0;
+text-align:center;
+width:165px;
+}
+/* START Download Notifications */
+div#notifications{
+border:solid 1px #999999;
+clear:right;
+font-size:.85em;
+float:right;
+margin-left:15px;
+width:165px;
+}
+div#notifications *{
+margin:0 0 2px 0;
+}
+div#notifications div{
+padding:0 5px 3px 5px;
+}
+div#notifications a{
+font-size:.8em;
+font-weight:bold;
+}
+/* END Download Notifications */
+/* END details thankyou*/
+
+/* START WWList */
+table#wwList td{
+font-size:.7em;
+padding-right:10px;
+vertical-align:top;
+width:30%;
+}
+/* END WWList */
+
+/* START Products */
+div#products #links{
+font-size:.8em;
+font-weight:bold;
+}
+div#products li{
+color:#999999;
+font-size:.7em;
+line-height:.7em;
+}
+div#products p{
+margin:0 0 10px 0;
+}
+div#products h1{
+margin:0;
+}
+div#products h4{
+border-bottom:solid 1px #E2E2E4;
+padding:0 0 5px 0;
+margin-bottom:5px;
+}
+/* END Products */
+

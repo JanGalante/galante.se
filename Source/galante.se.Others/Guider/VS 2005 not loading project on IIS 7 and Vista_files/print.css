@@ -1,0 +1,228 @@
+body {
+	font-size : 0.9em;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin : 0px;
+}
+
+a:visited,
+a:active,
+a:link {	
+	color : #00F;
+	text-decoration : none;
+}
+
+a:hover {
+	text-decoration : underline;
+}
+
+h1 {	
+	margin : 0px;
+	font-size : 1.5em;
+}
+
+h1 a:visited,
+h1 a:active,
+h1 a:link {
+	color : #000;
+}
+
+h1 a:hover {
+	color : #47F;
+	text-decoration : none;
+}
+
+h2 {
+	margin-top : 10px;
+	font-size : 1em;
+}
+
+h5 
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	padding : 10px;
+	background-color : #ADF;
+	color : #000;
+	border-bottom : 4px solid #47F;
+}
+
+#tagline {
+	font-size : 0.8em;
+	margin : 0px;
+}
+
+p.date img {
+	vertical-align : middle;
+}
+
+p.date {
+	font-size : 0.9em;
+	font-weight : bold;
+	border-bottom : 1px solid #AAA;	
+	margin-bottom : 0px;
+	padding : 2px 0px;
+}
+
+blockquote {
+	font-style : italic;
+}
+
+p.postfoot {
+	font-size : 0.75em;
+}
+
+#sidebar-a {
+	display: none;
+}
+#sidebar-b {
+	display: none;
+}
+
+#content {
+	background-color : #EEE;
+	border-bottom : 4px solid #47F;
+}
+
+#footer {
+	margin : 0px;	
+	padding-top : 5px;
+	text-align : center;
+	font-size : 0.7em;
+}
+
+input.text {
+	width : 300px;	
+}
+
+textarea {
+	width : 300px;
+	height : 200px;	
+}
+
+#comments h4 span {
+	color : #999;
+}
+
+#comments h4 {
+	margin : 0px;
+	font-size : 0.9em;
+}
+
+#comments
+{
+ margin-top:15px;
+}
+
+
+p {
+	margin : 10px 0px;
+}
+
+h3 {
+	font-size : 1.2em;
+	border-bottom : 1px solid #AAA;
+}
+
+#relatedlinks ul {
+	list-style : none;
+	margin-left : 10px;
+	padding : 0px;
+}
+
+	#commentform, #contactform {
+	padding: 10px 0px 3px 0px;
+	/*border: 1px solid #ddd;*/
+	}
+
+#commentform {
+	display: none;
+}
+
+#commentform dl, #contactform dl {
+	margin: 0;
+	padding: 0;
+	}
+
+#commentform dt, #contactform dt {
+	color: #333;
+	}
+
+#commentform dt em, #contactform dt em {
+	color: #999;
+	font-weight: normal;
+	font-style: normal;
+	}
+ 
+#commentform .smallbox, #contactform .contactbox {
+	width: 300px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	color: #444;
+	}
+
+#commentform textarea, #contactform textarea {
+	width: 400px;
+	height: 180px;
+	border: 1px solid #ccc;
+	color: #444;
+	}
+	
+
+
+#search .searchBox 
+{
+	width: 150px;
+	border: 1px solid #ccc;
+	padding: 2px;
+
+}
+
+#search
+{
+    margin-bottom: 5px;
+}
+
+#news
+{
+    margin-bottom: 5px;
+}
+
+
+.CalendarTitle td, td.CalendarDays
+{
+	color : #000;
+	font-size : .75em;
+	font-weight: bold;
+	width:14%;
+
+}
+
+td.CalendarNextPrev
+{
+	width:15%;
+	font-weight: normal;
+	font-size : .65em;
+}
+
+
+td.CalendarDay
+{
+	color : #000;
+	font-size : .75em;
+}
+
+.copyright  /* used to format the content owner's copyright notice */
+{
+    text-align: center;
+    font-size : .65em;
+    font-style:italic;
+}
+
+.rateMenu 
+{ 
+    background-color:#FFF;  
+    border: 1px outset;
+}
