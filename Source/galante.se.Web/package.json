@@ -1,8 +1,5 @@
 {
   "jspm": {
-    "directories": {
-      "baseURL": "wwwroot"
-    },
     "dependencies": {
       "moment": "npm:moment@^2.10.6"
     },
