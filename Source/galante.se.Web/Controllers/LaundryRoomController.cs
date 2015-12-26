@@ -17,11 +17,11 @@ namespace galante.se.Controllers
         // GET: /LaundryRoom/
         //public CustomModelBinderAttribute
 
-        public ActionResult Index()
-        {
-            ErrorSignal.FromCurrentContext().Raise(new NotSupportedException());
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    ErrorSignal.FromCurrentContext().Raise(new NotSupportedException());
+        //    return View();
+        //}
 
         [HttpPost]
         public FileContentResult Download(FormCollection formCollection)

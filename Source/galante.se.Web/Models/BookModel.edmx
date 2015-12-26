@@ -4,10 +4,10 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Jlm9900_webModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="Jlm9900_webModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="Jlm9900_webModelStoreContainer">
-          <EntitySet Name="AUTHOR_TEST" EntityType="Jlm9900_webModel.Store.AUTHOR_TEST" store:Type="Tables" Schema="Jlm9900_admin" />
-          <EntitySet Name="BOOK_TEST" EntityType="Jlm9900_webModel.Store.BOOK_TEST" store:Type="Tables" Schema="Jlm9900_admin" />
+          <EntitySet Name="AUTHOR_TEST" EntityType="Jlm9900_webModel.Store.AUTHOR_TEST" store:Type="Tables" Schema="Jlm9900_admin" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="BOOK_TEST" EntityType="Jlm9900_webModel.Store.BOOK_TEST" store:Type="Tables" Schema="Jlm9900_admin" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK__BOOK_TEST__autho__30F848ED" Association="Jlm9900_webModel.Store.FK__BOOK_TEST__autho__30F848ED">
             <End Role="AUTHOR_TEST" EntitySet="AUTHOR_TEST" />
             <End Role="BOOK_TEST" EntitySet="BOOK_TEST" />
@@ -44,7 +44,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Jlm9900_webModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Schema Namespace="Jlm9900_webModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="SurftownMsSqlEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BOOK_TEST" EntityType="Jlm9900_webModel.BOOK_TEST" />
           <EntitySet Name="AUTHOR_TEST" EntityType="Jlm9900_webModel.AUTHOR_TEST" />
@@ -127,6 +127,6 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams />
   </Designer>
 </edmx:Edmx>

@@ -1,5 +1,5 @@
-[assembly: WebActivator.PreApplicationStartMethod(typeof(galante.se.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(galante.se.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(galante.se.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(galante.se.App_Start.NinjectWebCommon), "Stop")]
 
 namespace galante.se.App_Start
 {
@@ -10,7 +10,6 @@ namespace galante.se.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using galante.se.Business;
 
     public static class NinjectWebCommon 
     {
@@ -41,22 +40,27 @@ namespace galante.se.App_Start
         private static IKernel CreateKernel()
         {
             var kernel = new StandardKernel();
-            kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-            kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-            
-            RegisterServices(kernel);
-            return kernel;
+            try
+            {
+                kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
+                RegisterServices(kernel);
+                return kernel;
+            }
+            catch
+            {
+                kernel.Dispose();
+                throw;
+            }
         }
 
         /// <summary>
-        /// Load your modules or register your services here! Define bindings.
+        /// Load your modules or register your services here!
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            // e.g. kernel.Load(Assembly.GetExecutingAssembly());
-            kernel.Bind<IBook>().To<AdventureBook>();
-            //kernel.Bind<IBook>().To<ScienceBook>();
         }        
     }
 }
