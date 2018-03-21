@@ -1,2 +1,2 @@
 # galante.se
-My awesome web page
+My not so awesome web page
